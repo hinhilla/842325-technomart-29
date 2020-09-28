@@ -1,0 +1,485 @@
+:root {
+   --basic-red:#EE3643;
+   --basic-blue: #32425C;
+  --basic-green:#63A63E;
+  --basic-gray:#3D546F;
+  --basic-graylight:#C5C5C5;
+  --dark-blue: #293449;
+  --background-graylight: #F1F5F7;
+  --basic-white: #FFFFFF;
+  --focus-white: rgba(255, 255, 255, 0.5);
+  --basic-black: #000000;
+  --special-yellow:#FFBF47;
+  --transparent-button: rgba(255, 255, 255, 0.3);
+  --special-blue:#3BBCE3;
+  --special-lilac:#DC91D8;
+  --special-greenlight:#8ED78F;
+  --special-yellowlight:#FFC047;
+ --shadow-green:#367315;
+  --success:#5FBB2D;
+  --focus-blue-user-navigation:#161D29;
+  --focus-blue-site-navigation:#1D2739;
+  --hover-button-red:#CA2C37;
+  --focus-button-red:#BA2732;
+  --focus-button-green:#518534;
+  /* слайдер */
+  --slider-shadow:rgba(0, 0, 0, 0.25);
+  /* Раздел популярные */
+  --popular-background:#F9F5F0;
+  /* Карточка товара */
+  --old-price: #A9A9A9;
+  --focus-transparent-button:#A9A9A9;
+  --border-of-kart:#EAEAEA;
+  --focus-blue-transparent: rgba(50, 66, 92, 0.5);
+  --focus-shadow:rgba(0, 0, 0, 0.15);
+  /*
+  --warning:#FFBF47;
+  --error: #BA2732;
+   */
+      /* эти цвета потом использую */
+  /* Футер */
+  --footer-yellow:#FFD180;
+  --footer-white:#F1F5F7;
+  --footer-address:#F3F7F9;
+}
+.page-body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: var(--basic-white;)
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+input::-webkit-input-placeholder {
+  color: inherit;
+}
+input:-moz-placeholder {
+  color: inherit;
+  /* знаю, что глабольные стили нельзя, я попозже исправлю, когда буду проверять, где у меня этот импут используется. а само по себе это правило норм?  */
+}
+.button {
+  border: none;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  font-size: 14px;
+  line-height: 18px;
+}
+/* main-navigation */
+
+.main-navigation {
+  background-color: var(--background-graylight);
+}
+.user-navigation {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+  background-color: var(--dark-blue);
+}
+.set-an-order {
+  background-color: var(--basic-green);
+}
+.description {
+font-size: 16px;
+line-height: 23px;
+font-style: italic;
+font-weight: 400;
+color: var(--basic-red);
+}
+.header-telephone {
+font-size: 21px;
+line-height: 30px;
+font-weight: 700;
+color: var(--basic-red);
+display: block;
+border: 3px solid var(--basic-white);
+}
+.header-address {
+font-size: 14px;
+line-height: 24px;
+font-weight: 400;
+font-style: normal;
+color: var(--basic-black);
+}
+.header-link {
+display: block;
+font-size: 21px;
+line-height: 21px;
+color: var(--basic-black);
+background-color: var(--basic-white);
+}
+.site-navigation {
+list-style: none;
+background-color: var(--basic-blue);
+border-bottom: 5px solid var(--dark-blue);
+}
+.site-navigation-item {
+font-size: 18px;
+line-height: 24px;
+color: var(--basic-white);
+}
+.search {
+  font:inherit;
+  border: none;
+  background-color: inherit;
+  color: var(--basic-white);
+}
+/* Состояния интерактивных элементов*/
+
+.user-navigation a:hover,
+.user-navigation a {
+color: var(--basic-white);
+}
+.site-navigation a:hover {
+background-color: var(--dark-blue);
+}
+.site-navigation a:focus,
+.user-navigation a:focus,
+.user-navigation-links a:focus {
+  color: var(--focus-white);
+}
+.site-navigation a:focus {
+  background-color: var(--focus-blue-site-navigation);
+}
+.header-link:hover{
+  color: var(--basic-red);
+}
+.header-link:focus {
+  color: var(--basic-graylight);
+}
+.set-an-order:hover {
+  background-color: var(--success);
+}
+.set-an-order:focus {
+  background-color: var(--basic-green);
+}
+.bookmarks:focus {
+  background-color: var(--focus-blue-user-navigation);
+}
+.search:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+
+
+/*  container*/
+.offers a {
+  color: var(--basic-white);
+}
+
+.offer-item h3{
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+color: var(--basic-white);
+}
+.offer-item {
+display:block;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+text-transform: uppercase;
+}
+.transparent-button {
+background-color: var(--transparent-button);
+color: var(--basic-white);
+}
+.transparent-button:hover {
+background-color: var(--basic-graylight);
+}
+.transparent-button:focus {
+background-color: var(--focus-transparent-button);
+
+}
+.materials {
+  background-color: var(--special-yellow);
+}
+.tool {
+  background-color: var(--special-blue);
+}
+.technic {
+  background-color: var(--special-lilac);
+}
+.discount {
+  background-color: var(--special-greenlight);
+}
+.delivery-free {
+  background-color: var(--special-yellowlight);
+}
+.slider h3 {
+font-size: 36px;
+line-height: 36px;
+text-transform: uppercase;
+}
+.slider p{
+font-size: 18px;
+line-height: 24px;
+}
+.slider {
+  background-color: var(--basic-gray);  /* какой именно брать цвет? можно ли как в фотошопе выбрать несколько точек и выбрать средний цвет для фона? */
+  color: var(--basic-white);
+}
+ .button-all {
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  font-size: 14px;
+  line-height: 18px;
+}
+.slider-shadow {
+  background-color: var(--slider-shadow);
+}
+.button-slider:hover {
+  background-color: var(--hover-button-red);
+}
+.button-slider:focus {
+background-color: var(--focus-button-red);
+}
+/* Раздел популярных товаров */
+.popular-products-list {
+  list-style: none;
+}
+.popular-header {
+background-color: var(--popular-background);
+}
+.popular-block h2 {
+font-size: 30px;
+line-height: 30px;
+text-transform: uppercase;
+color: var(--basic-blue);
+}
+/* Карточка товара */
+.popular-products-item {
+  font-family: "PT Sans", Arial, sans-serif;
+  border: 1px solid var(--border-of-kart);
+}
+.popular-products-item:hover,
+.manufacturer-item:hover {
+  box-shadow: 0px 4px 20px var(--focus-shadow);
+}
+.manufacturer-item:focus {
+  box-shadow: 0px 4px 20px var(--focus-shadow);
+  opacity: 50%;
+}
+.popular-products-item h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+.old-price {
+font-weight: bold;
+font-size: 17px;
+line-height: 18px;
+text-decoration: line-through;
+color: var(--old-price);
+}
+.new-price {
+font-weight: bold;
+font-size: 17px;
+line-height: 18px;
+color: var(--basic-white);
+background-color: var(--basic-red);
+}
+.button-buy {
+color: var(--basic-white);
+background-color: var(--basic-green);
+box-shadow: inset 0px -3px 0px var(--shadow-green);
+border-radius: 2px;
+}
+.button-buy:hover {
+background-color: var(--success);
+}
+.button-buy:focus {
+  background-color: var(--focus-button-green);
+}
+.product-hover{
+  display: none;
+}
+.product-hover .button {
+outline: 0;
+font-size: 14px;
+line-height: 18px;
+text-transform: uppercase;
+}
+.button-add-bookmarks {
+  border: 3px solid var(--basic-green);
+  color: var(--basic-blue);
+  background-color: var(--basic-white);
+}
+.button-add-bookmarks:hover {
+border: 3px solid var(--basic-blue);
+}
+.button-add-bookmarks:focus {
+border: 3px solid var(--focus-blue-transparent);
+color: var(--focus-blue-transparent);
+}
+/*Популярные производители  */
+.manufacturer-list {
+list-style: none;
+}
+.manufacturer-item {
+border: 1px solid var(--border-of-kart);
+}
+
+/* Сервисы */
+.serviсes h2 {
+font-size: 30px;
+line-height: 30px;
+text-transform: uppercase;
+color: var(--basic-black);
+}
+.serviсes p {
+font-family: "PT Sans", arial, sans-serif;
+font-size: 13px;
+line-height: 24px;
+color: var(--basic-black);
+}
+.serviсes-list {
+  list-style: none;
+}
+.serviсes-item a {
+font-weight: bold;
+font-size: 21px;
+line-height: 30px;
+color: var(--basic-white);
+background-color: var(--basic-blue);
+}
+.serviсes-item a:hover {
+background-color: var(--dark-blue);
+}
+.serviсes-item a:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-blue);
+
+}
+/* Доставка */
+.delivery h3 {
+font-size: 30px;
+line-height: 30px;
+text-transform: uppercase;
+color: var(--basic-blue);
+}
+.delivery p {
+font-family: "PT Sans", arial, sans-serif;
+font-size: 13px;
+line-height: 24px;
+color: var(--basic-black);
+}
+/* КОМПАНИЯ «Техномарт» */
+.company h2 {
+font-size: 30px;
+line-height: 30px;
+text-transform: uppercase;
+
+}
+.company p {
+font-family: "PT Sans"; arial, sans-serif;
+font-size: 13px;
+line-height: 24px;
+}
+.transport-company-list {
+  list-style: none;
+}
+.transport-company-item {
+font-size: 18px;
+line-height: 24px;
+}
+/* Контакты */
+.contacts h2 {
+font-size: 30px;
+line-height: 30px;
+text-transform: uppercase;
+}
+.contacts p {
+font-family: "PT Sans", arial, sans-serif;
+font-size: 13px;
+line-height: 24px;
+}
+/* Футер */
+.footer-navigation-block a {
+  color: var(--basic-white);
+}
+.footer-address, .footer-telephone {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--footer-address);
+}
+.footer-navigation-list {
+  list-style: none;
+  margin-bottom: 0;
+}
+.footer-navigation-item {
+font-size: 18px;
+line-height: 24px;
+}
+.footer-navigation-item:nth-child(-n+10) a {
+  color: var(--footer-yellow);
+}
+.footer-navigation-item a:hover{
+  text-decoration: underline;
+}
+.footer-navigation-item:nth-child(-n+5) a {
+  color: var(--footer-white); /* через nth-child или лучше задать классы? */
+}
+.footer-navigation-item a:focus{
+  opacity: 50%;  /*можно через opacity, или нужно назначать новый цвет?  */
+}
+.footer-navigation-block {
+  background-color: var(--basic-blue);
+}
+
+/* вторая часть футера */
+.footer-social-navigation {
+  background-color: var(--dark-blue);
+}
+.footer-social-navigation p {
+  margin: 0;
+}
+.copyright,
+.footer-social-navigation span {
+font-size: 16px;
+line-height: 18px;
+color: var(--basic-white);
+}
+.social-navigation-list {
+list-style: none;
+  }
+.footer-social-navigation a {
+font-size: 16px;
+line-height: 18px;
+color: var(--footer-yellow);
+}
+.feedback-link:hover,
+.developed-link:hover {
+  text-decoration: underline;
+}
+.feedback-link:focus,
+.developed-link:focus {
+color: var(--basic-red);
+}
+/* Модальные окна */
+.modal input {
+background-color: var(--basic-white);
+border: 2px solid var(--basic-graylight);
+border-radius: 2px;
+color
+}
+.modal input::-webkit-input-placeholder {
+  color: var(--old-price);
+  /* надо будет поменять название цвета, так как он повторяется */
+}
+.modal input:-moz-placeholder {
+  color: var(--old-price);
+  /* надо будет поменять название цвета */
+}
