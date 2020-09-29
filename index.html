@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -45,7 +44,6 @@
 
     <main class="container">
       <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
-
       <div class="offer-block">
         <section class="offers">
           <h2 class="visually-hidden"> Предложения магазина </h2>
@@ -75,7 +73,7 @@
         <div class="slider">
           <section>
             <div class="slider-shadow">
-              <h3>Перфораторы</h2>
+              <h3>Перфораторы</h3>
               <p>Настоящие мужские игрушки</p>
             </div>
             <img src="" alt="Перфоратор">
@@ -83,13 +81,14 @@
           </section>
           <section>
             <div class="slider-shadow">
-              <h3>Дрели</h2>
+              <h3>Дрели</h3>
               <p>Соседям на радость!</p>
             </div>
             <img src="" alt="Дрель">
             <a href="#" class="button button-all button-slider">открыть каталог</a>
           </section>
         </div>
+      </div>
         <section class="popular-block popular-products">
           <div class="popular-header">
             <h2>Популярные товары:</h2>
@@ -143,7 +142,7 @@
                 <button type="button" name="button" class="button button-buy">Купить</button>
                 <button type="button" name="button" class="button button-add-bookmarks">В закладки</button>
               </div>
-            </li  class="popular-products-item">
+            </li>
           </ul>
         </section>
 
@@ -253,75 +252,78 @@
         <nav class="footer-navigation">
           <ul class="footer-navigation-list">
             <li class="footer-navigation-item">
-              <a href="#">Компания</a>
+              <a href="#" class="first-line-link">Компания</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="#">Новости</a>
+              <a href="#" class="first-line-link">Новости</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="#">Каталог</a>
+              <a href="#" class="first-line-link">Каталог</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="#">Доставка</a>
+              <a href="#" class="first-line-link">Доставка</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="#">Контакты</a>
+              <a href="#" class="first-line-link">Контакты</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="#">Материалы</a>
+              <a href="#" class="second-line-link">Материалы</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="#">Техника</a>
+              <a href="#" class="second-line-link">Техника</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="#">Инструмент</a>
+              <a href="#" class="second-line-link">Инструмент</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="#">Спецпредложения</a>
+              <a href="#" class="second-line-link">Спецпредложения</a>
             </li>
           </ul>
         </nav>
-      <div class="footer-social-navigation">
-        <p class="copyright">© 2010–2019 Компания «Техномарт» <br>Все права защищены</p>
-        <ul class="social-navigation-list">
-          <li class="social-navigation-item vkontakte">
-            <a href="#">Вконтакте</a>
-          </li>
-          <li class="social-navigation-item facebook">
-            <a href="#">Фейсбук</a>
-          </li>
-          <li class="social-navigation-item instagram">
-            <a href="#">Инстаграм</a>
-          </li>
-        </ul>
-        <div class="feedback">
-          <span>Обратная связь:</span>
-          <a href="#" class="feedback-link">mail@htmlacademy.ru</a>
-        </div>
-        <div class="developed">
-          <span>Разработано —</span>
-          <a href="#" class="developed-link">htmlacademy.ru</a>
+        <div class="footer-social-navigation">
+          <p class="copyright">© 2010–2019 Компания «Техномарт» <br>Все права защищены</p>
+          <ul class="social-navigation-list">
+            <li class="social-navigation-item vkontakte">
+              <a href="#">Вконтакте</a>
+            </li>
+            <li class="social-navigation-item facebook">
+              <a href="#">Фейсбук</a>
+            </li>
+            <li class="social-navigation-item instagram">
+              <a href="#">Инстаграм</a>
+            </li>
+          </ul>
+          <div class="feedback">
+            <span>Обратная связь:</span>
+            <a href="#" class="feedback-link">mail@htmlacademy.ru</a>
+          </div>
+          <div class="developed">
+            <span>Разработано —</span>
+            <a href="#" class="developed-link">htmlacademy.ru</a>
+          </div>
         </div>
       </div>
     </footer>
 
     <section class="modal modal-write-us">
+      <h2>Форма регистрации</h2>
       <button type="button" name="button" class="button close-modal visually-hidden">Закрыть окно</button>
-      <label for="">
+      <label for="name">
         Ваше имя:
-        <input type="text" name="" value="" placeholder="Имя Фамилия">
+        <input type="text" name="" value="" id="name" placeholder="Имя Фамилия">
       </label>
-      <label for="">
+      <label for="email">
         Ваш e-mail:
-        <input type="text" name="" value="" placeholder="email@example.com">
+        <input type="text" name="" value="" id="email" placeholder="email@example.com">
       </label>
-      <label for="">
+      <label for="message">
         Текст письма:
-        <input type="text" name="" value="" placeholder="В свободной форме">
+        <input type="text" name="" value="" id="message" placeholder="В свободной форме">
       </label>
       <button type="button" name="button" class="button">Отправить</button>
     </section>
     <section class="modal modal-map">
+      <h2>Карта</h2>
       <button type="button" name="button" class="button close-modal visually-hidden">Закрыть окно</button>
       <iframe src="" width="" height=""></iframe>
     </section>

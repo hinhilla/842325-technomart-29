@@ -1,46 +1,61 @@
 :root {
-   --basic-red:#EE3643;
-   --basic-blue: #32425C;
+  /* basic-colors  */
+  --basic-red:#EE3643;
+  --basic-blue: #32425C;
   --basic-green:#63A63E;
   --basic-gray:#3D546F;
   --basic-graylight:#C5C5C5;
-  --dark-blue: #293449;
-  --background-graylight: #F1F5F7;
-  --basic-white: #FFFFFF;
-  --focus-white: rgba(255, 255, 255, 0.5);
   --basic-black: #000000;
-  --special-yellow:#FFBF47;
-  --transparent-button: rgba(255, 255, 255, 0.3);
-  --special-blue:#3BBCE3;
-  --special-lilac:#DC91D8;
-  --special-greenlight:#8ED78F;
-  --special-yellowlight:#FFC047;
- --shadow-green:#367315;
-  --success:#5FBB2D;
+  --basic-white: #FFFFFF;
+  --dark-blue: #293449;
+
+   /* background-colors */
+  --background-beige:#F7F3EC;
+  --background-graylight: #F1F5F7;
+  --background-bluelight: #F2F6F8;
+  --popular-background:#F9F5F0;
+
+  /*focus-hover*/
+  --focus-white: rgba(255, 255, 255, 0.5);
   --focus-blue-user-navigation:#161D29;
   --focus-blue-site-navigation:#1D2739;
   --hover-button-red:#CA2C37;
   --focus-button-red:#BA2732;
   --focus-button-green:#518534;
-  /* слайдер */
+  --hover-button-green:#5FBB2D;
+  --focus-footer-white:rgba(241,245,247,0.5);
+  --focus-footer-yellow:rgba(255, 209, 128, 0.5);
+
+   /* transparent */
+   --transparent-text: rgba(0, 0, 0, 0.3);
+   --transparent-button: rgba(255, 255, 255, 0.3);
+
+   /*offer-block  */
+  --special-blue:#3BBCE3;
+  --special-lilac:#DC91D8;
+  --special-greenlight:#8ED78F;
+  --special-yellowlight:#FFC047;
+  --special-yellow:#FFBF47;
+
+  /* slider */
   --slider-shadow:rgba(0, 0, 0, 0.25);
-  /* Раздел популярные */
-  --popular-background:#F9F5F0;
-  /* Карточка товара */
+
+  /* разделы с карточкой товара и "производители"*/
   --old-price: #A9A9A9;
   --focus-transparent-button:#A9A9A9;
   --border-of-kart:#EAEAEA;
   --focus-blue-transparent: rgba(50, 66, 92, 0.5);
   --focus-shadow:rgba(0, 0, 0, 0.15);
-  /*
-  --warning:#FFBF47;
-  --error: #BA2732;
-   */
-      /* эти цвета потом использую */
+  --border-graylight:#E5E5E5;
+  --shadow-green:#367315;
+
   /* Футер */
   --footer-yellow:#FFD180;
   --footer-white:#F1F5F7;
   --footer-address:#F3F7F9;
+
+  /* modal  */
+   --modal-gray: #A9A9A9;
 }
 .page-body {
   min-width: 1200px;
@@ -51,7 +66,7 @@
   font-weight: 400;
   line-height: 24px;
   color: var(--basic-black);
-  background-color: var(--basic-white;)
+  background-color: var(--basic-white);
 }
 a {
   text-decoration: none;
@@ -60,13 +75,12 @@ img {
   max-width: 100%;
   height: auto;
 }
-input::-webkit-input-placeholder {
+/* input::-webkit-input-placeholder {
   color: inherit;
 }
 input:-moz-placeholder {
   color: inherit;
-  /* знаю, что глабольные стили нельзя, я попозже исправлю, когда буду проверять, где у меня этот импут используется. а само по себе это правило норм?  */
-}
+} */
 .button {
   border: none;
   color: var(--basic-white);
@@ -75,16 +89,17 @@ input:-moz-placeholder {
   font-size: 14px;
   line-height: 18px;
 }
+
 /* main-navigation */
 
 .main-navigation {
-  background-color: var(--background-graylight);
+background-color: var(--background-graylight);
 }
 .user-navigation {
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--basic-white);
-  background-color: var(--dark-blue);
+font-size: 18px;
+line-height: 24px;
+color: var(--basic-white);
+background-color: var(--dark-blue);
 }
 .set-an-order {
   background-color: var(--basic-green);
@@ -134,7 +149,6 @@ color: var(--basic-white);
   background-color: inherit;
   color: var(--basic-white);
 }
-/* Состояния интерактивных элементов*/
 
 .user-navigation a:hover,
 .user-navigation a {
@@ -158,7 +172,7 @@ background-color: var(--dark-blue);
   color: var(--basic-graylight);
 }
 .set-an-order:hover {
-  background-color: var(--success);
+  background-color: var(--hover-button-green);
 }
 .set-an-order:focus {
   background-color: var(--basic-green);
@@ -226,7 +240,7 @@ font-size: 18px;
 line-height: 24px;
 }
 .slider {
-  background-color: var(--basic-gray);  /* какой именно брать цвет? можно ли как в фотошопе выбрать несколько точек и выбрать средний цвет для фона? */
+  background-color: var(--basic-blue);
   color: var(--basic-white);
 }
  .button-all {
@@ -267,9 +281,9 @@ color: var(--basic-blue);
 .manufacturer-item:hover {
   box-shadow: 0px 4px 20px var(--focus-shadow);
 }
-.manufacturer-item:focus {
+.manufacturer-item :focus {
   box-shadow: 0px 4px 20px var(--focus-shadow);
-  opacity: 50%;
+  color: var(--transparent-text);
 }
 .popular-products-item h3 {
   font-weight: bold;
@@ -298,14 +312,14 @@ box-shadow: inset 0px -3px 0px var(--shadow-green);
 border-radius: 2px;
 }
 .button-buy:hover {
-background-color: var(--success);
+background-color: var(--hover-button-green);
 }
 .button-buy:focus {
   background-color: var(--focus-button-green);
 }
-.product-hover{
+/* .product-hover{
   display: none;
-}
+} */
 .product-hover .button {
 outline: 0;
 font-size: 14px;
@@ -313,9 +327,9 @@ line-height: 18px;
 text-transform: uppercase;
 }
 .button-add-bookmarks {
-  border: 3px solid var(--basic-green);
-  color: var(--basic-blue);
-  background-color: var(--basic-white);
+border: 3px solid var(--basic-green);
+color: var(--basic-blue);
+background-color: var(--basic-white);
 }
 .button-add-bookmarks:hover {
 border: 3px solid var(--basic-blue);
@@ -381,10 +395,9 @@ color: var(--basic-black);
 font-size: 30px;
 line-height: 30px;
 text-transform: uppercase;
-
 }
 .company p {
-font-family: "PT Sans"; arial, sans-serif;
+font-family: "PT Sans", arial, sans-serif;
 font-size: 13px;
 line-height: 24px;
 }
@@ -411,29 +424,32 @@ line-height: 24px;
   color: var(--basic-white);
 }
 .footer-address, .footer-telephone {
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--footer-address);
+font-size: 18px;
+line-height: 24px;
+color: var(--footer-address);
 }
 .footer-navigation-list {
-  list-style: none;
-  margin-bottom: 0;
+list-style: none;
+margin-bottom: 0;
 }
 .footer-navigation-item {
 font-size: 18px;
 line-height: 24px;
 }
-.footer-navigation-item:nth-child(-n+10) a {
-  color: var(--footer-yellow);
+.footer-navigation-item .first-line-link {
+color: var(--footer-white);
 }
 .footer-navigation-item a:hover{
-  text-decoration: underline;
+text-decoration: underline;
 }
-.footer-navigation-item:nth-child(-n+5) a {
-  color: var(--footer-white); /* через nth-child или лучше задать классы? */
+.footer-navigation-item .second-line-link {
+color: var(--footer-yellow);
 }
-.footer-navigation-item a:focus{
-  opacity: 50%;  /*можно через opacity, или нужно назначать новый цвет?  */
+.first-line-link:focus{
+color: var(--focus-footer-white);
+  }
+.second-line-link:focus {
+color: var(--focus-footer-yellow);
 }
 .footer-navigation-block {
   background-color: var(--basic-blue);
@@ -473,13 +489,174 @@ color: var(--basic-red);
 background-color: var(--basic-white);
 border: 2px solid var(--basic-graylight);
 border-radius: 2px;
-color
 }
 .modal input::-webkit-input-placeholder {
-  color: var(--old-price);
-  /* надо будет поменять название цвета, так как он повторяется */
+  color: var(--modal-gray);
 }
 .modal input:-moz-placeholder {
-  color: var(--old-price);
-  /* надо будет поменять название цвета */
+  color: var(--modal-gray);
+}
+
+/* внутренняя страница */
+/* header */
+.basket-full {
+  background-color: var(--basic-red);
+}
+.user-name {
+font-size: 21px;
+line-height: 21px;
+color: var(--basic-black);
+}
+.user-name:focus {
+color: var(--basic-graylight);
+}
+.personal-account {
+font-size: 16px;
+line-height: 18px;
+color: var(--basic-blue);
+}
+.personal-account:hover {
+color: var(--basic-red)
+}
+.personal-account:focus {
+color: var(--basic-graylight);
+}
+.breadcrumbs {
+list-style: none;
+}
+.breadcrumbs li,
+.breadcrumbs a {
+font-size: 13px;
+line-height: 18px;
+text-transform: uppercase;
+color: var(--basic-black);
+}
+.perforators {
+display: block;
+font-size: 30px;
+line-height: 30px;
+text-transform: uppercase;
+color: var(--basic-blue);
+background-color: var(--background-bluelight);
+}
+.filter-block h3 {
+font-family: "PT Sans", arial, sans-serif;
+font-weight: 700;
+font-size: 17px;
+line-height: 30px;
+text-transform: uppercase;
+}
+.filter {
+display: block;
+background-color: var(--background-beige);
+font-family: "PT Sans", arial, sans-serif;
+font-size: 13px;
+line-height: 18px;
+font-weight: 400;
+text-transform: uppercase;
+}
+.manufacturers-list {
+  list-style: none;
+}
+.manufacturers-list li {
+font-family: "PT Sans", arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 19px;
+text-transform: uppercase;
+}
+.supply-list {
+  list-style: none;
+}
+.supply-list li {
+font-family: "PT Sans", arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 19px;
+text-transform: uppercase;
+}
+.show-button {
+font-family: "PT Sans", arial, sans-serif;
+font-size: 13px;
+line-height: 18px;
+text-transform: uppercase;
+border: 1px solid var(--border-graylight);
+background-color: transparent;
+}
+.sort-block {
+  background-color: var(--background-beige);
+}
+.sort-block button,
+.sort-block h2 {
+  font-family: "PT Sans", arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.sort-block button {
+  font-family: "PT Sans", arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--transparent-text);
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px dashed var(--basic-red);
+}
+.sort-block button:hover {
+  color: var(--basic-black);
+  border-bottom: 1px solid var(--basic-red);
+}
+.sort-block button:focus {
+color: var(--basic-red);
+outline: none;
+border: none;
+}
+.sort-list {
+list-style: none;
+}
+.products-list {
+  list-style: none;
+}
+/* Пагинация */
+.pagination {
+  list-style:none;
+  }
+.pagination a {
+font-family: "PT Sans", arial, sans-serif;
+font-size: 13px;
+line-height: 18px;
+color: var(--basic-black);
+border: 1px solid var(--border-graylight);
+  }
+.next-page {
+  text-transform: uppercase;
+}
+.pagination a:hover {
+  border: 1px solid var(--basic-graylight);
+}
+.pagination a:focus {
+  border: 1px solid var(--basic-red);
+}
+.pagination .active {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+}
+/* пару слов о перфораторах */
+.few-words-block {
+  background-color: var(--background-graylight);
+}
+.few-words-block  h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.few-words-block p {
+font-family: "PT Sans", arial, sans-serif;
+font-size: 13px;
+line-height: 24px;
 }
