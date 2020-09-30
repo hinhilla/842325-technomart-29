@@ -92,7 +92,17 @@ input:-moz-placeholder {
 }
 
 /* main-navigation */
-
+.logo {
+  display: block;
+  text-align: center;
+  width: 220px;
+  height: 47px;
+background-color: var(--basic-red);
+box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+.logo img {
+  vertical-align:bottom;  /* не очень понимаю как выровнять точно до пикселя */
+}
 .main-navigation {
 background-color: var(--background-graylight);
 }
@@ -285,6 +295,9 @@ color: var(--basic-blue);
 .manufacturer-item :focus {
   box-shadow: 0px 4px 20px var(--focus-shadow);
   color: var(--transparent-text);
+}
+.manufacturer-item a:focus {
+  opacity: 50%;
 }
 .popular-products-item h3 {
   font-weight: bold;
