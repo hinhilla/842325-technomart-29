@@ -26,6 +26,7 @@
   --hover-button-green:#5FBB2D;
   --focus-footer-white:rgba(241,245,247,0.5);
   --focus-footer-yellow:rgba(255, 209, 128, 0.5);
+  --focus-logo:#BA2732;
 
    /* transparent */
    --transparent-text: rgba(0, 0, 0, 0.3);
@@ -58,10 +59,19 @@
   /* modal  */
    --modal-gray: #A9A9A9;
 }
+.page {
+  height: 100%;
+}
 .page-body {
   min-width: 1200px;
+  min-height: 100%;
   margin: 0;
   padding: 0;
+  display: grid;
+  /* grid-template-columns: 1;
+  grid-auto-rows: 1;
+  align-content: start;
+  */
   font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -95,13 +105,17 @@ input:-moz-placeholder {
 .logo {
   display: block;
   text-align: center;
-  width: 220px;
-  height: 47px;
+  max-width: 220px;
+  max-height: 47px;
 background-color: var(--basic-red);
 box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+
 }
 .logo img {
-  vertical-align:bottom;  /* не очень понимаю как выровнять точно до пикселя */
+  /* позже выровняю */
+}
+.logo:focus {
+  background-color: var(--focus-logo);
 }
 .main-navigation {
 background-color: var(--background-graylight);
