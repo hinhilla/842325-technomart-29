@@ -32,7 +32,7 @@
    --transparent-text: rgba(0, 0, 0, 0.3);
    --transparent-button: rgba(255, 255, 255, 0.3);
 
-   /*offer-block  */
+   /*offers */
   --special-blue:#3BBCE3;
   --special-lilac:#DC91D8;
   --special-greenlight:#8ED78F;
@@ -68,10 +68,9 @@
   margin: 0;
   padding: 0;
   display: grid;
-  /* grid-template-columns: 1;
-  grid-auto-rows: 1;
+  grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  */
+
   font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -92,6 +91,11 @@ img {
 input:-moz-placeholder {
   color: inherit;
 } */
+/* main-header */
+.main-header {
+  margin-bottom: 60px;
+  background-color: var(--background-graylight);
+}
 .button {
   border: none;
   color: var(--basic-white);
@@ -103,10 +107,10 @@ input:-moz-placeholder {
 
 /* main-navigation */
 .logo {
-  display: block;
-  text-align: center;
-  max-width: 220px;
-  max-height: 47px;
+display: block;
+text-align: center;
+max-width: 220px;
+max-height: 47px;
 background-color: var(--basic-red);
 box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 
@@ -115,19 +119,34 @@ box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
   /* позже выровняю */
 }
 .logo:focus {
-  background-color: var(--focus-logo);
+background-color: var(--focus-logo);
 }
+
 .main-navigation {
-background-color: var(--background-graylight);
+display: grid;
+grid-template-rows: min-content min-content min-content;
+padding-bottom: 60px;
+}
+.user-navigation-container-blue {
+  background-color: var(--dark-blue);
 }
 .user-navigation {
+width: 940px;
+margin: 0 auto;
+padding: 0;
 font-size: 18px;
 line-height: 24px;
 color: var(--basic-white);
-background-color: var(--dark-blue);
+
 }
+.header-info {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .set-an-order {
-  background-color: var(--basic-green);
+background-color: var(--basic-green);
 }
 .description {
 font-size: 16px;
@@ -159,6 +178,9 @@ color: var(--basic-black);
 background-color: var(--basic-white);
 }
 .site-navigation {
+width: 940px;
+margin: 0 auto;
+padding: 0;
 list-style: none;
 background-color: var(--basic-blue);
 border-bottom: 5px solid var(--dark-blue);
@@ -212,10 +234,24 @@ background-color: var(--dark-blue);
 
 
 /*  container*/
+.content-bar {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
 .offers a {
   color: var(--basic-white);
 }
-
+.offer-list {
+list-style: none;
+margin: 0;
+padding: 0;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: auto auto auto;
+gap: 20px;
+margin-bottom: 60px;
+}
 .offer-item h3{
 font-weight: bold;
 font-size: 24px;
@@ -223,6 +259,7 @@ line-height: 30px;
 color: var(--basic-white);
 }
 .offer-item {
+
 display:block;
 font-weight: normal;
 font-size: 14px;
@@ -265,8 +302,11 @@ font-size: 18px;
 line-height: 24px;
 }
 .slider {
-  background-color: var(--basic-blue);
-  color: var(--basic-white);
+background-color: var(--basic-blue);
+color: var(--basic-white);
+grid-column: 1 / 3;
+grid-row: 2 / 4;
+/* подскажи, что я тут не так сделала, пожалуйста. слайдер не там, где нужно  */
 }
  .button-all {
   color: var(--basic-white);
@@ -288,15 +328,23 @@ background-color: var(--focus-button-red);
 .popular-products-list {
   list-style: none;
 }
-.popular-header {
-background-color: var(--popular-background);
-}
+
 .popular-block h2 {
 font-size: 30px;
 line-height: 30px;
 text-transform: uppercase;
 color: var(--basic-blue);
 }
+.popular-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 70px;
+}
+.popular-header {
+background-color: var(--popular-background);
+}
+
 /* Карточка товара */
 .popular-products-item {
   font-family: "PT Sans", Arial, sans-serif;
@@ -375,6 +423,16 @@ border: 1px solid var(--border-of-kart);
 }
 
 /* Сервисы */
+.services-container {
+  background-color: var(--background-graylight);
+}
+.serviсes,
+.delivery {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+/*по поводу сетки этого блока, я думаю что тут гриды не подходят, потому что, тогда придется менять разметку, а она там наиболее логичная. можно ли сделать подраздел "доставка" абсолютно спозиционированным? по идее там кнопка должна переключать "доставку" на " гарантию" и "кредит". или лучше как-то иначе? */
 .serviсes h2 {
 font-size: 30px;
 line-height: 30px;
@@ -418,6 +476,16 @@ font-size: 13px;
 line-height: 24px;
 color: var(--basic-black);
 }
+/* Сетка для разделов "компания" и "контакты" */
+.company-contacts-grid {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 70px;
+}
 /* КОМПАНИЯ «Техномарт» */
 .company h2 {
 font-size: 30px;
@@ -448,7 +516,18 @@ font-size: 13px;
 line-height: 24px;
 }
 /* Футер */
-.footer-navigation-block a {
+.footer-container-blue {
+background-color: var(--basic-blue);
+}
+.footer-navigation-block {
+  display: grid;
+  grid-template-columns: 380px auto;
+  margin-bottom: 55px;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+.main-footer a {
   color: var(--basic-white);
 }
 .footer-address, .footer-telephone {
@@ -479,13 +558,20 @@ color: var(--focus-footer-white);
 .second-line-link:focus {
 color: var(--focus-footer-yellow);
 }
-.footer-navigation-block {
-  background-color: var(--basic-blue);
-}
 
 /* вторая часть футера */
+.footer-container-dark-blue {
+background-color: var(--dark-blue);
+}
 .footer-social-navigation {
-  background-color: var(--dark-blue);
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+
 }
 .footer-social-navigation p {
   margin: 0;
