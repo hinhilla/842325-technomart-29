@@ -331,7 +331,6 @@
       </footer>
 
     <section class="modal modal-write-us">
-      <!-- красная полоска в макете указана как изображение и сверху него еще полупрозрачный фон. правильно я понимаю? -->
       <h2 class="visually-hidden">Форма регистрации</h2>
       <button type="button" name="button" class="button close-modal visually-hidden">Закрыть окно</button>
       <div class="modal-imputs">
@@ -345,7 +344,9 @@
         </label>
         <label for="message">
           <span>Текст письма:</span>
-          <input type="text" name="" value="" id="message" placeholder="В свободной форме" class="message">
+          <textarea type="text" name="" value="" id="message" placeholder="В свободной форме" class="message">
+          </textarea>
+          <!-- отображается плейсхолдер только после выделения блока -->
         </label>
       </div>
 

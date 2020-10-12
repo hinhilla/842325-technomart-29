@@ -31,6 +31,7 @@
    /* transparent */
    --transparent-text: rgba(0, 0, 0, 0.3);
    --transparent-button: rgba(255, 255, 255, 0.3);
+   --transparent-border: rgba(0, 0, 0, 0.01);
 
    /*offers */
   --special-blue:#3BBCE3;
@@ -106,8 +107,8 @@ input:-moz-placeholder {
 } */
 /* main-header */
 .main-header {
-
   background-color: var(--background-graylight);
+  margin-bottom: 20px;
 }
 .button {
   border: none;
@@ -120,13 +121,15 @@ input:-moz-placeholder {
 
 /* main-navigation */
 .logo {
-display: block;
+display: flex;
 text-align: center;
 width: 220px;
-min-height: 47px;
+height: 47px;
 background-color: var(--basic-red);
 box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-
+}
+.logo img {
+  margin: auto;
 }
 .logo:focus {
 background-color: var(--focus-logo);
@@ -322,7 +325,6 @@ padding-bottom: 20px;
 font-size: 18px;
 line-height: 24px;
 margin: 0;
-padding: 0;
 padding-left: 25px;
 padding-bottom: 20px;
 }
@@ -496,10 +498,29 @@ border: 3px solid var(--focus-blue-transparent);
 color: var(--focus-blue-transparent);
 }
 /*Популярные производители  */
-.manufacturer-list {
+.manufacturer-list,
+.supply-list {
 list-style: none;
 padding: 0;
+margin: 0;
+}
+.supply-filter {
+  margin-bottom: 25px;
+}
+.manufacturers-list li,
+.supply-list li {
 
+  margin-bottom: 25px;
+  padding-left: 35px;
+}
+.manufacturers-list input[type=checkbox],
+.supply-list input[type=radio] {
+  display: none;
+
+}
+.show-button {
+ width: 100%;
+ height: 30px;
 }
 .manufacturer-item {
 border: 1px solid var(--border-of-kart);
@@ -708,7 +729,7 @@ color: var(--basic-black);
 .company-contacts-grid {
   width: 940px;
   margin: 0 auto;
-  padding: 0;
+
   display: grid;
   grid-template-columns: 450px 450px;
   gap: 170px;
@@ -806,7 +827,6 @@ background-color: var(--basic-blue);
   margin-bottom: 55px;
   width: 940px;
   margin: 0 auto;
-  padding: 0;
   padding-bottom: 60px;
 }
 .main-footer a {
@@ -883,15 +903,18 @@ color: var(--footer-yellow);
 color: var(--basic-red);
 }
 /* Модальные окна */
-.modal input {
+.modal input,
+.modal textarea {
 background-color: var(--basic-white);
 border: 2px solid var(--basic-graylight);
 border-radius: 2px;
 }
-.modal input::-webkit-input-placeholder {
+.modal input::-webkit-input-placeholder,
+.modal textarea::-webkit-input-placeholder {
   color: var(--modal-gray);
 }
-.modal input:-moz-placeholder {
+.modal input:-moz-placeholder,
+.modal textarea:-moz-placeholder {
   color: var(--modal-gray);
 }
 
@@ -904,23 +927,48 @@ border-radius: 2px;
 font-size: 21px;
 line-height: 21px;
 color: var(--basic-black);
+background-color: var(--basic-white);
+padding-left: 57px;
+padding-right: 56px;
+padding-top: 12px;
+padding-bottom: 12px;
+box-sizing: border-box;
+margin-bottom: 7px;
+}
+
+.user-name-header {
+  display: flex;
+  flex-direction: column;
 }
 .user-name:focus {
 color: var(--basic-graylight);
 }
 .personal-account {
+  align-self: center;
+}
+.personal-account a {
 font-size: 16px;
 line-height: 18px;
 color: var(--basic-blue);
+
 }
-.personal-account:hover {
+.personal-account a:not(:last-child) {
+margin-right: 10px;
+}
+.personal-account a:hover {
 color: var(--basic-red)
 }
-.personal-account:focus {
+.personal-account a:focus {
 color: var(--basic-graylight);
 }
 .breadcrumbs {
 list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+.breadcrumbs a{
+  margin-right: 40px;
 }
 .breadcrumbs li,
 .breadcrumbs a {
@@ -936,13 +984,26 @@ line-height: 30px;
 text-transform: uppercase;
 color: var(--basic-blue);
 background-color: var(--background-bluelight);
+min-height: 89px;
+margin: 0;
+padding: 0;
+padding-top: 30px;
+padding-left: 30px;
+box-sizing: border-box;
+margin-bottom: 20px;
 }
-.filter-block h3 {
+.filter-block h3,
+.filter-block legend {
 font-family: "PT Sans", arial, sans-serif;
 font-weight: 700;
 font-size: 17px;
 line-height: 30px;
 text-transform: uppercase;
+}
+.filter-block fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 .filter {
 display: block;
@@ -952,11 +1013,33 @@ font-size: 13px;
 line-height: 18px;
 font-weight: 400;
 text-transform: uppercase;
+height: 38px;
+margin: 0;
+padding: 0;
+padding-left: 18px;
+padding-top: 10px;
+box-sizing: border-box;
+margin-bottom: 20px
+
+}
+.price-filter-block {
+  border-bottom: 1px solid var(--transparent-border);
+  margin-bottom: 23px;
+}
+.price-filter {
+  margin: 0;
+  padding: 0;
+}
+.manufacturers-filter {
+  margin-bottom: 25px;
 }
 .manufacturers-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
   margin-bottom: 128px;
 }
+
 .manufacturers-list li {
 font-family: "PT Sans", arial, sans-serif;
 font-style: normal;
@@ -964,6 +1047,10 @@ font-weight: normal;
 font-size: 15px;
 line-height: 19px;
 text-transform: uppercase;
+
+}
+.manufacturers-list li:last-child {
+margin:0;
 }
 .supply-list {
   list-style: none;
@@ -986,6 +1073,14 @@ background-color: transparent;
 }
 .sort-block {
   background-color: var(--background-beige);
+  display: flex;
+  align-items: center;
+}
+.sort {
+  padding-left: 19px;
+}
+.sort-list button {
+padding-left: 30px;
 }
 .sort-block button,
 .sort-block h2 {
@@ -1000,7 +1095,6 @@ background-color: transparent;
   font-size: 13px;
   line-height: 18px;
   color: var(--transparent-text);
-  padding: 0;
   background-color: inherit;
   border: none;
   border-bottom: 1px dashed var(--basic-red);
@@ -1016,21 +1110,39 @@ border: none;
 }
 .sort-list {
 list-style: none;
-}
-.products-list {
-  list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+align-items: center;
 }
 /* Пагинация */
 .pagination {
   list-style:none;
-  }
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-bottom: 58px;
+    }
 .pagination a {
 font-family: "PT Sans", arial, sans-serif;
 font-size: 13px;
 line-height: 18px;
 color: var(--basic-black);
 border: 1px solid var(--border-graylight);
+display: block;
+width: 38px;
+height: 38px;
+padding-left: 14px;
+padding-top: 7px;
+box-sizing: border-box;
   }
+.pagination li:last-child a {
+  width: 140px;
+  padding-left: 25px;
+}
+.pagination li{
+  margin-right: 25px;
+}
 .next-page {
   text-transform: uppercase;
 }
@@ -1044,6 +1156,7 @@ border: 1px solid var(--border-graylight);
   background-color: var(--basic-red);
   color: var(--basic-white);
 }
+
 /* пару слов о перфораторах */
 .few-words-block {
   width: 940px;
@@ -1064,9 +1177,22 @@ line-height: 24px;
 
 .wrapper-background {
   background-color: var(--background-graylight);
+
+
 }
+.few-words-block{
+padding-top: 67px;
+padding-bottom: 67px;
+}
+.few-words-block h2 {
+  margin-bottom: 36px;
+}
+
 /* сетка на гридах */
 .products-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
@@ -1085,6 +1211,7 @@ line-height: 24px;
 .breadcrumbs {
   grid-area: 1/1/2/-1;
   margin: 0;
+  margin-bottom: 20px;
 }
 .breadcrumbs li {
 list-style: none;
@@ -1111,12 +1238,6 @@ grid-area: 3/2/4/-1;
   width: 150px;
 text-align: center;
 }
-.logo {
-  display: flex;
-}
-.logo img {
-  margin: auto;
-}
 .bookmarks,
 .basket,
 .set-an-order {
@@ -1135,8 +1256,9 @@ text-align: center;
 display: flex;
 justify-content: space-between;
 }
-.header-info p,
-.header-info div {
+.header-info .description,
+.header-info .contacts-header,
+.header-info .user-name-header {
   width: 300px;
   min-height: 158px;
   margin: 0;
@@ -1301,7 +1423,7 @@ margin-bottom: 37px;
   box-sizing: border-box;
   margin-top: 20px;
   padding-left: 10px;
-/* тут нужно выровнять текст в плейсхолдере */
+  resize: none;
 }
 .modal-imputs span {
   padding: 0;

@@ -23,13 +23,18 @@
           </div>
         <div class="header-info">
           <p class="description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-          <a href="tel:+78125550555" class="header-telephone">+7 (812) 555-05-55</a>
-          <address class="header-address">
-                  г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-          </address>
-          <div>
+          <div class="contacts-header">
+            <a href="tel:+78125550555" class="header-telephone">+7 (812) 555-05-55</a>
+            <address class="header-address">
+                    г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            </address>
+          </div>
+          <div class="user-name-header">
             <a href="#" class="user-name">Равшан Джамшутович</a>
-            <a href="#" class="personal-account"><span>Мои заказы</span> <span>Личный кабинет</span></a>
+            <div class="personal-account">
+              <a href="#"><span>Мои заказы</span></a>
+              <a href="#"><span>Личный кабинет</span></a>
+            </div>
           </div>
         </div>
         <ul class="site-navigation">
@@ -46,22 +51,22 @@
     <main class="inner-container">
       <div class="wrapper-center-grid">
         <ul class="breadcrumbs">
-          <li> <a href="#" >Главная страница</a></li>
-          <li> <a href="#" >Каталог</a></li>
-          <li> <a href="#" >Инструмент </a></li>
+          <li> <a href="#"  class="visually-hidden">Главная страница</a></li>
+          <li> <a href="#">Каталог</a></li>
+          <li> <a href="#">Инструмент</a></li>
           <li>Перфораторы</li>
         </ul>
         <h1 class="perforators">Перфораторы</h1>
         <section class="filter-block">
           <h2 class="filter">Фильтр:</h2>
-          <section>
+          <section class="price-filter-block">
             <h3 class="price-filter">Цена</h3>
             <!-- <input type="range" min="0" max="50000" step="1" value="30000">
             <output>0</output> -->
             <!--формы добавить позже  -->
           </section>
-          <section>
-            <h3 class="manufacturers-filter">Производители:</h3>
+          <fieldset>
+            <legend class="manufacturers-filter">Производители:</legend>
             <ul class="manufacturers-list">
               <li><input type="checkbox" name="" value="" checked>BOSCH</li>
               <li><input type="checkbox" name="" value="">ИНТЕРСКОЛ</li>
@@ -69,14 +74,14 @@
               <li><input type="checkbox" name="" value="">Dewalt</li>
               <li><input type="checkbox" name="" value="">Hitachi</li>
             </ul>
-          </section>
-          <section>
-            <h3 class="supply-filter">Питание:</h3>
+          </fieldset>
+          <fieldset>
+            <legend class="supply-filter">Питание:</legend>
             <ul class="supply-list">
               <li><input type="radio" name="" value="" checked>Аккумуляторные</li>
               <li><input type="radio" name="" value="">Сетевые</li>
             </ul>
-          </section>
+          </fieldset>
           <button type="button" name="button" class="show-button">Показать</button>
         </section>
         <section class="sort-block">
@@ -145,7 +150,7 @@
               <li class="popular-products-item">
                 <img src="img/3000-2000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор">
                 <h3>Перфоратор BOSCH BFG 2000</h3>
-                <span>12500 Р.</span>
+                <span  class="new-price">12500 Р.</span>
                 <div class="product-hover">
                   <button type="button" name="button" class="button button-buy">Купить</button>
                   <button type="button" name="button" class="button button-add-bookmarks">В закладки</button>
