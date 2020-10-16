@@ -131,13 +131,13 @@ input:-moz-placeholder {
 /* main-navigation */
 .logo {
 display: flex;
+  flex-wrap: wrap;
 text-align: center;
 width: 220px;
 height: 42px;
 background-color: var(--basic-red);
-box-shadow: 0px 5px 0px rgba(138, 31, 39, 1);
-/* border-bottom: 5px solid var(--transparent-logo); */
-/* тут нужно сделать так, чтобы с тенью логотип выходил 47px, а остальные элементы 42px и выравнивались по верхнему краю */
+box-shadow: 0px 5px 0px rgba(131, 41, 51, 1);
+/* цвет брала пипеткой из макета, но он точно темнее выглядит, так ведь? :/  */
 }
 .logo img {
   margin: auto;
@@ -711,6 +711,7 @@ margin-bottom: 21px;
 
 .popular-products-item:hover .product-hover {
   display: flex;
+    flex-wrap: wrap;
 
 }
 .manufacturer-item :focus {
@@ -997,28 +998,41 @@ color: var(--basic-black);
 .serviсes-list {
   list-style: none;
 }
-.serviсes-item a {
+.serviсes-item button {
   display: block;
 font-weight: bold;
 font-size: 21px;
 line-height: 30px;
 color: var(--basic-white);
 background-color: var(--basic-blue);
-box-shadow: inset 0px 1px 0px var(--services-shadow-button);
 }
-.serviсes-item a:hover {
+.serviсes-item button {
+box-shadow:
+0px 1px 0px var(--dark-blue),
+inset 0px 1px 0px var(--services-shadow-button);
+/* тут у блока по макету 2 тени, светлая сверху внутри блока и темная внизу снаружи блока. но темная не видна за следом идущим блоком. не знаю как исправить(   */
+}
+.serviсes-item:first-child button {
+box-shadow: 0px 1px 0px var(--basic-white);
+}
+
+.serviсes-item button:hover {
 background-color: var(--dark-blue);
 }
-.serviсes-item a:focus {
-  background-color: var(--basic-white);
-  color: var(--basic-blue);
-
+.serviсes-item button:focus {
+background-color: var(--basic-white);
+color: var(--basic-blue);
 }
 .serviсes-item {
-  display: flex;
-  box-sizing: border-box;
-  }
-  .serviсes-item a {
+display: flex;
+box-sizing: border-box;
+}
+  .serviсes-item button {
+padding: 0;
+margin: 0;
+outline: none;
+border: none;
+text-align: left;
 width: 100%;
 padding-left: 10px;
 padding-top: 20px;}
@@ -1090,22 +1104,24 @@ margin-bottom: 30px;
   position: relative;
 }
 .modal-write-us {
-  display: none;
-  position: absolute;
-  left:128px;
-  top:15px;
-}
-.modal-map {
-  position: absolute;
-  left:0;
-  top:15px;
   display: block;
+
+}
+
+.map-wrapper {
+position: fixed;
+width: 100%;
+height: 100%;
+left: auto;
+top:150px;
+display: none;
+/* это опреедленно неправильно, не получается выровнять по высоте */
 }
 
 .company,
 .contacts {
-  display: grid;
-  grid-template-rows: 100px 100px 176px auto;
+display: grid;
+grid-template-rows: 100px 100px 176px auto;
 }
 .company-contacts-grid h2 {
   grid-area: 1/1 /2/2;
@@ -1140,6 +1156,10 @@ width: 220px;
 box-sizing: border-box;
 }
 .button-text-us {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  outline: none;
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 12px;
@@ -1326,7 +1346,21 @@ border-radius: 2px;
 
 /* внутренняя страница */
 /* header */
-
+.user-name-icon:hover path,
+.log-out-icon:hover path {
+fill: var(--basic-gray);
+}
+.user-name-icon:focus path,
+.log-out-icon:focus path{
+fill: var(--basic-graylight);
+  }
+.user-name-icon:focus .user-name {
+  color: var(--basic-graylight);
+}
+.user-name-icon {
+  display: flex;
+  padding-left: 15px;
+}
 .basket-full {
   background-color: var(--basic-red);
 }
@@ -1351,12 +1385,11 @@ margin-bottom: 7px; */
 min-height: 45px;
 }
 .user-name-icon svg {
-  position: absolute;
+  margin: auto;
   width: 20px;
   height: 18px;
-  top: 15px;
-  left:10px;
-  }
+  margin-right: 21px;
+}
 
 .log-out-icon svg {
   position: absolute;
@@ -1369,6 +1402,7 @@ min-height: 45px;
 
 .user-name-header {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 .user-name:focus {
@@ -1408,6 +1442,7 @@ list-style: none;
 margin: 0;
 padding: 0;
 display: flex;
+flex-wrap: wrap;
 
 }
 .breadcrumbs li,
@@ -1533,6 +1568,7 @@ padding-bottom: 10px;
 }
 .price-controls {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
 }
@@ -1570,40 +1606,35 @@ margin-bottom: 20px
   margin-top: 24px;
 
 }
-input:hover+.svg-box path {
+input:hover+label path {
   fill: var(--checkbox-focus);
 }
-input:focus+.svg-box path,
-input:active+.svg-box path {
+input:focus+label path,
+input:active+label path {
   fill: var(--checkbox-focus);
   opacity: 30%;
 }
+.checkbox-on,
+.checkbox-off {
+  margin-right: 10px;
 
+}
 .manufacturers-list label {
-  display: block;
-  position: relative;
+  display: flex;
   cursor: pointer;
    user-select: none;
-   padding-left: 35px;
+   /* padding-left: 10px; */
 }
 .manufacturers-list li {
   position: relative;
 
-}
-.checkbox-on,
-.checkbox-off {
-  position: absolute;
-  left: 6px;
-  top: -3px;
-  width: 30px;
-  height: 30px;
 }
 .checkbox-on {
   width:27px;
   height: 23px;
 }
 .checkbox-off {
-  width: 23px;
+  width: 27px;
   height: 23px;
 }
 
@@ -1614,8 +1645,11 @@ input:active+.svg-box path {
 .checkbox-on{
   display: none;
 }
-input:checked+.svg-box .checkbox-on {
+input:checked+label .checkbox-on {
   display: block;
+  }
+  input:checked+label .checkbox-off {
+    display: none;
   }
 
 
@@ -1759,6 +1793,7 @@ list-style: none;
 margin: 0;
 padding: 0;
 display: flex;
+flex-wrap: wrap;
 align-items: center;
 margin-right: 45px;
 }
@@ -1785,6 +1820,7 @@ margin-right: 45px;
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 58px;
     }
 .pagination a {
@@ -1920,6 +1956,7 @@ text-align: center;
 .header-info {
 display: flex;
 justify-content: space-between;
+flex-wrap: wrap;
 }
 .header-info .description,
 .header-info .contacts-header,
@@ -1932,6 +1969,7 @@ justify-content: space-between;
 
 .header-links {
 display: flex;
+flex-wrap: wrap;
 justify-content: flex-end;
 
 }
@@ -1997,26 +2035,30 @@ box-sizing: border-box;
 }
 .offer-item {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 
 }
 .offer-item h3 {
-  margin-top: 20px;
+  margin-top: 17px;
   margin-left: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   padding: 0;
 }
 .offer-item a {
   width: 135px;
   height: 38px;
   margin-left: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
   padding-left: 15px;
-  padding-top: 10px;
+  display: flex;
+  align-items: center;
+
   box-sizing: border-box;
 }
 .popular-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -2026,11 +2068,19 @@ box-sizing: border-box;
   padding: 0;
 }
 .popular-header a {
-  margin-right: 10px;
-padding-left: 10px;
-padding-right: 10px;
-padding-top: 10px;
-padding-bottom: 10px;
+  width: 192px;
+height: 38px;
+margin-right: 19px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+
+}
+
+.popular-manufacturer {
+  margin-bottom: 70px;
 }
 /* футер сетка */
 .footer-container .logo {
@@ -2050,9 +2100,11 @@ margin-top: 45px;
 }
 .social-navigation-list {
   display: flex;
+  flex-wrap: wrap;
 }
 .about-developers {
   display: flex;
+    flex-wrap: wrap;
   justify-content: space-between;
 }
 .feedback {
@@ -2067,7 +2119,7 @@ margin-top: 45px;
 
 }
 .modal-write-us {
-
+position: relative;
 width: 620px;
 height: 430px;
 box-shadow: 0px 20px 40px var( --modal-shadow);
@@ -2080,8 +2132,8 @@ background-color: transparent;
 outline: none;
 width: 21px;
 height: 21px;
-left: 0;
-top: 22px;
+left:590px;
+top: 10px;
 cursor: pointer;
 }
 
@@ -2093,8 +2145,9 @@ cursor: pointer;
   background-repeat: no-repeat;
   width: 21px;
   height: 21px;
-  left: 580px;
-  top: -4px;
+  left: 0px;
+  top: 0px;
+
 }
 .close-modal-map::after {
   position: absolute;
@@ -2109,10 +2162,10 @@ cursor: pointer;
 
 }
 .background-modal {
-  /* margin-top: auto; */
   background-color: var(--background-modal);
   height: 112px;
   display: flex;
+    flex-wrap: wrap;
 }
 .modal-button {
   width: 460px;
@@ -2130,6 +2183,7 @@ margin-bottom: 37px;
 }
 .modal-imputs label {
   display: flex;
+    flex-wrap: wrap;
   flex-direction: column;
 }
 .name,
@@ -2163,18 +2217,13 @@ height: 449px;
 box-shadow: 0px 0px 14.7px var(--modal-map-shadow);
 }
 .modal-basket {
-  position: absolute;
   width: 620px;
   height: 282px;
   box-shadow: 0px 20px 40px var( --modal-shadow);
 background-color: var(--basic-white);
-left:-70px;
-top:163px;
 
 }
-.modal-basket {
-  display: none;
-}
+
 .modal-basket .background-modal {
   justify-content: center;
   align-items: center;
@@ -2211,3 +2260,21 @@ top:163px;
 .products-block {
   position: relative;
 }
+.modal-write-us-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: none;
+  }
+  .modal-write-us {
+    margin: auto;
+  }
+  .modal-basket-wrapper {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    left:auto;
+    top:50vh;
+    display: none;
+  }
