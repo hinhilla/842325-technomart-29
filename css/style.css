@@ -20,6 +20,7 @@
   --background-toggle:#ABABAB;
   --shadow-toggle: rgba(171, 171, 171, 0.3);
   --social-icon-background:#212A3A;
+  --shadow-logo: #b52933;
 
   /*focus-hover*/
   --focus-white: rgba(255, 255, 255, 0.5);
@@ -140,8 +141,7 @@ text-align: center;
 width: 220px;
 height: 42px;
 background-color: var(--basic-red);
-box-shadow: 0px 5px 0px rgba(131, 41, 51, 1);
-/* цвет брала пипеткой из макета, но он точно темнее выглядит, так ведь? :/  */
+box-shadow: 0px 5px 0px var(--shadow-logo);
 }
 .logo img {
   margin: auto;
@@ -679,8 +679,8 @@ margin-bottom: 21px;
 
 .popular-products-item {
   display: grid;
-  grid-template-columns: 218px;
-  /* проверить */
+  width: 220px;
+  box-sizing: border-box;
   grid-template-rows: 177px 47px 33px auto;
   position: relative;
 }
@@ -1246,7 +1246,7 @@ margin-bottom: 11px;
   background-color: var(--basic-red);
   width: 25px;
   height: 2px;
-  top:14px;
+  top:11px;
   left: 0;
 
 }
@@ -1264,7 +1264,7 @@ line-height: 24px;
 }
 /* Футер */
 .footer-logo {
-  height: 68px;
+  height: 62px;
 }
 .footer-container-blue {
 background-color: var(--basic-blue);
@@ -1275,7 +1275,7 @@ background-color: var(--basic-blue);
   margin-bottom: 55px;
   width: 940px;
   margin: 0 auto;
-  padding-bottom: 52px;
+  padding-bottom: 55px;
 }
 .main-footer a {
   color: var(--basic-white);
@@ -1285,6 +1285,7 @@ font-size: 18px;
 line-height: 24px;
 color: var(--footer-address);
 font-style: normal;
+padding-left: 2px;
 }
 .footer-navigation-list {
 list-style: none;
@@ -1322,7 +1323,7 @@ background-color: var(--dark-blue);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  padding-top: 32px;
+  padding-top: 35px;
   padding-bottom: 33px;
 
 }
@@ -1341,7 +1342,7 @@ list-style: none;
 margin: 0;
 padding: 0;
 padding-left: 70px;
-padding-top: 5px;
+padding-top: 3px;
   }
 .footer-social-navigation a {
 font-size: 16px;
@@ -1809,7 +1810,8 @@ height: 38px;
   background-color: var(--background-beige);
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
+
 }
 .sort {
   margin-top: 8px;
@@ -1848,6 +1850,7 @@ margin: 0;
   background-color: inherit;
   border: none;
   outline: none;
+  align-self: center;
 }
 .sort-list button {
   border-bottom: 1px dashed var(--basic-red);
@@ -1871,6 +1874,7 @@ display: flex;
 flex-wrap: wrap;
 align-items: center;
 margin-right: 45px;
+padding-top: 4px;
 }
 .sort-list li:first-child {
   margin-right: 70px;
@@ -1907,13 +1911,14 @@ border: 1px solid var(--border-graylight);
 display: block;
 width: 38px;
 height: 38px;
-padding-left: 14px;
-padding-top: 7px;
+display: flex;
+justify-content: center;
+align-items: center;
 box-sizing: border-box;
   }
 .pagination li:last-child a {
   width: 140px;
-  padding-left: 31px;
+
 }
 .pagination li{
   margin-right: 10px;
@@ -1974,7 +1979,7 @@ padding-bottom: 58px;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
   gap: 18px;
-  margin-bottom: 47px;
+  margin-bottom: 45px;
   padding-top: 29px;
 }
 .wrapper-center-grid {
@@ -2187,7 +2192,7 @@ margin-right: 19px;
 }
 /* футер сетка */
 .footer-container .logo {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 .footer-navigation-list {
   display: flex;
@@ -2199,7 +2204,7 @@ margin-right: 19px;
 }
 .footer-navigation-item {
 margin-right: 60px;
-margin-top: 37px;
+margin-top: 35px;
 }
 .social-navigation-list {
   display: flex;
@@ -2213,13 +2218,14 @@ margin-top: 37px;
 }
 .about-developers span {
   display: block;
-  padding-bottom: 2px;
+
 }
 .feedback {
   width:150px;
 }
 .developed {
   width:115px;
+  margin-right: -4px;
 }
 /* форма регистрации */
 .modal {
@@ -2332,7 +2338,13 @@ margin-bottom: 37px;
 .modal-map {
 width: 943px;
 height: 449px;
+/* background-image: url(../img/map-modal.jpg);
+background-position: 0 0;
+background-repeat: no-repeat; */
 box-shadow: 0px 0px 14.7px var(--modal-map-shadow);
+}
+.modal-map iframe {
+  border: none;
 }
 .modal-basket {
   width: 620px;
