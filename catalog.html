@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="main-header">
+    <header class="main-header main-header-catalog">
         <nav class="main-navigation">
           <div class="user-navigation-container-blue">
             <div class="user-navigation">
@@ -25,8 +25,8 @@
             </div>
           </div>
         <div class="header-info">
-          <p class="description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-          <div class="contacts-header">
+          <p class="description">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</p>
+          <div class="contacts-header contacts-header-authorized">
             <a href="tel:+78125550555" class="header-telephone">+7 (812) 555-05-55</a>
             <address class="header-address">
                     г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -80,18 +80,16 @@
                   margin-left: 0">
                   </div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0" style="left:5%;">
+                <div class="toggle toggle-min" tabindex="0" style="left:8%;">
                 </div>
-                <div class="toggle toggle-max" tabindex="0" style="left:70%;">
+                <div class="toggle toggle-max" tabindex="0" style="left:73%;">
                 </div>
               </div>
               <div class="price-controls">
                 <label for="min-price">
                   <input id="min-price" type="number" name="min-price" value="0">
                 </label>
-                <label for="max-price">
-                  -
-                  <input id="max-price" type="number" name="max-price" value="30000" class="max-price">
+                <label for="max-price"> —<input id="max-price" type="number" name="max-price" value="30000" class="max-price">
                 </label>
               </div>
             </div>
@@ -199,7 +197,7 @@
                 <h3>Перфоратор BOSCH BFG 6000</h3>
                 <span class="old-price">30500 Р.</span>
                 <div class="new-price">
-                  <spa>25500 Р.</span>
+                  <span>25500 Р.</span>
                 </div>
                 <div class="product-hover">
                   <button type="button" name="button" class="button button-buy">Купить</button>
@@ -298,9 +296,8 @@
         <div class="wrapper-background">
           <section class="few-words-block">
             <h2>Пара слов о перфораторах</h2>
-            <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-    Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
-    В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+            <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
+    Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
           </section>
         </div>
 
@@ -310,8 +307,8 @@
         <div class="footer-navigation-block">
           <div class="footer-address-block">
             <div class="footer-container">
-              <a href="C:/Users/Катя/Documents/github/842325-technomart-29/index.html" class="logo">
-                <img src="img/logo-technomart.svg" width="108" height="18" alt="переход на главную страницу Техномарта">
+              <a href="C:/Users/Катя/Documents/github/842325-technomart-29/index.html" class="logo footer-logo">
+                <img src="img/logo-technomart.svg" width="138" height="23" alt="переход на главную страницу Техномарта">
               </a>
               <address class="footer-address">
                 г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -378,6 +375,31 @@
             </div>
           </div>
         </div>
-    </footer>
+      </footer>
+      <div class="modal-write-us-wrapper">
+        <section class="modal modal-write-us">
+          <h2 class="visually-hidden">Форма регистрации</h2>
+          <button type="button" name="button" class="close-modal close-modal-write-us" aria-label="Закрыть окно"></button>
+          <div class="modal-imputs">
+            <label for="name">
+              <span>Ваше имя:</span>
+              <input type="text" name="name" value="" id="name" placeholder="Имя Фамилия" class="name">
+            </label>
+            <label for="email">
+              <span>Ваш e-mail:</span>
+              <input type="text" name="email" value="" id="email" placeholder="email@example.com" class="email">
+            </label>
+            <label for="message">
+              <span>Текст письма:</span>
+              <textarea name="message" id="message" placeholder="В свободной форме" class="message">
+              </textarea>
+              <!-- отображается плейсхолдер только после выделения блока -->
+            </label>
+          </div>
+          <div class="background-modal">
+            <button type="button" name="button" class="button button-all modal-button">Отправить</button>
+          </div>
+        </section>
+      </div>
   </body>
 </html>

@@ -119,6 +119,10 @@ input:-moz-placeholder {
   background-color: var(--background-graylight);
   margin-bottom: 57px;
 }
+.main-header-catalog {
+  margin-bottom: 21px;
+
+}
 .button {
   border: none;
   color: var(--basic-white);
@@ -450,7 +454,7 @@ position: relative;
   height: 70px;
   background-position: 0 0;
   background-repeat: no-repeat;
-  top: 0;
+  top: -1px;
   right: 0;
 }
 .slider-controls {
@@ -831,11 +835,11 @@ margin: 0;
 .supply-filter {
   margin-bottom: 25px;
 }
-.manufacturers-list li,
+.manufacturers-list li {
+  margin-bottom: 16px;
+}
 .supply-list li {
-
-  margin-bottom: 25px;
-
+    margin-bottom: 23px;
 }
 .manufacturers-list input[type=checkbox],
 .supply-list input[type=radio] {
@@ -1421,16 +1425,10 @@ font-size: 21px;
 line-height: 21px;
 color: var(--basic-black);
 margin: auto;
-/* padding-left: 57px;
-padding-right: 56px;
-padding-top: 12px;
-padding-bottom: 12px;
-box-sizing: border-box;
-margin-bottom: 7px; */
 }
 .user-name-field {
   position: relative;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
   background-color: var(--basic-white);
   display: flex;
   flex-wrap: wrap;
@@ -1448,7 +1446,7 @@ min-height: 45px;
   width: 20px;
   height: 17px;
   top: 15px;
-  left:267px;
+  left:264px;
 
 }
 
@@ -1473,15 +1471,15 @@ position: relative;
   position: absolute;
   content: "";
   background-color: var(--basic-blue);
-  width: 6px;
-  height: 7px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   top: 7px;
   left: -18px;
 }
 
 .personal-account a:not(:last-child) {
-margin-right: 33px;
+margin-right: 26px;
 }
 .personal-account a:hover {
 color: var(--basic-red)
@@ -1501,6 +1499,7 @@ flex-wrap: wrap;
 .breadcrumbs a {
 font-size: 13px;
 line-height: 18px;
+font-family: "PT Sans", arial, sans-serif;
 text-transform: uppercase;
 color: var(--basic-black);
 }
@@ -1513,12 +1512,15 @@ color: var(--basic-black);
   width: 14px;
   height: 12px;
 }
+
 .breadcrumbs li:not(:last-child) {
   position: relative;
 
-  padding-right: 22px;
+  padding-right: 40px;
 }
-
+.breadcrumbs li:first-child {
+  padding-right: 42px;
+}
 
 .breadcrumbs li:not(:last-child)::after {
   position: absolute;
@@ -1529,7 +1531,7 @@ color: var(--basic-black);
   width: 16px;
   height: 19px;
   top: -2px;
-  right: -1px;
+  right: 9px;
 
 }
 .price-filter-block {
@@ -1542,6 +1544,7 @@ margin: 0;
 display: block;
 font-size: 30px;
 line-height: 30px;
+font-weight: 400;
 text-transform: uppercase;
 color: var(--basic-blue);
 background-color: var(--background-bluelight);
@@ -1560,12 +1563,12 @@ font-weight: 700;
 font-size: 17px;
 line-height: 30px;
 text-transform: uppercase;
-font-weight: 400;
+
 }
 
 .range-filter {
   width: 220px;
-  margin-top: 20px;
+  margin-top: 9px;
 }
 .range-controls {
   background-color: var(--background-beige);
@@ -1594,11 +1597,11 @@ margin-bottom: 9px;
   width: 4px;
   height: 4px;
   background-color: var(--background-toggle);
-  border: 10px solid var(--basic-white);
+  border: 8px solid var(--basic-white);
   border-radius: 50%;
   box-shadow: 0 2px 0 0 var(--shadow-toggle);
   position: absolute;
-  top: 28px;
+  top: 31px;
   left: 15px;
   cursor: pointer;
 }
@@ -1608,17 +1611,23 @@ margin-bottom: 9px;
 .toggle-max {
   left: 160px;
 }
+.price-controls .max-price {
+  padding-left: 12px;
+  box-sizing: border-box;
+}
 .price-controls input {
   width: 95px;
-padding-top: 10px;
+  padding:0;
+padding-top: 12px;
 padding-bottom: 10px;
+padding-left: 6px;
   background-color: var(--background-beige);
   border: none;
   border-radius: 5px;
   text-align: center;
   font-size: inherit;
-
 }
+
 .price-controls {
   display: flex;
   flex-wrap: wrap;
@@ -1628,6 +1637,7 @@ padding-bottom: 10px;
 .price-controls .max-price{
   margin-left: 5px;
 }
+
 
 .filter {
 display: block;
@@ -1643,7 +1653,7 @@ padding: 0;
 padding-left: 18px;
 padding-top: 10px;
 box-sizing: border-box;
-margin-bottom: 20px
+margin-bottom: 14px
 
 }
 .price-filter-block {
@@ -1656,7 +1666,9 @@ margin-bottom: 20px
 }
 .manufacturers-block {
   border: none;
-  margin-top: 24px;
+  margin: 0;
+  padding: 0;
+  margin-top: 14px;
 
 }
 input:hover+label path {
@@ -1707,7 +1719,7 @@ input:checked+label .checkbox-on {
 
 
 .manufacturers-filter {
-  margin-bottom: 25px;
+  margin-bottom: 17px;
 }
 .manufacturers-list {
   list-style: none;
@@ -1733,7 +1745,12 @@ margin:0;
 }
 .supply-block {
   border: none;
-  margin-top: 25px;
+  margin: 0;
+  padding: 0;
+
+  margin-top: 16px;
+  margin-bottom: 14px;
+
 }
 .supply-list {
   list-style: none;
@@ -1754,8 +1771,8 @@ margin:0;
   background-color: transparent;
   border:4px solid var(--basic-graylight);
   border-radius: 50%;
-  top:-6px;
-  left:-4px;
+  top:-2px;
+  left: 0;
   box-sizing: border-box;
 }
 .supply-list input:checked+label::after {
@@ -1765,8 +1782,8 @@ margin:0;
   height: 9px;
   background-color: var(--basic-graylight);
   border-radius: 50%;
-  top:2px;
-  left:4px;
+  top:6px;
+  left:8px;
 
 }
 
@@ -1785,6 +1802,8 @@ line-height: 18px;
 text-transform: uppercase;
 border: 1px solid var(--border-graylight);
 background-color: transparent;
+width: 220px;
+height: 38px;
 }
 .sort-block {
   background-color: var(--background-beige);
@@ -1793,7 +1812,9 @@ background-color: transparent;
   align-items: center;
 }
 .sort {
+  margin-top: 8px;
   padding-left: 19px;
+  margin-bottom: 13px;
 }
 .sort-list button,
 .button-sort {
@@ -1801,12 +1822,12 @@ padding:0;
 margin: 0;
 }
 .sort-block h2 {
-  margin-right: 136px;
+  margin-right: 145px;
 
 }
 
 .ascending {
-  margin-right: 21px;
+  margin-right: 19px;
 }
 .descending {
   margin-right: 16px;
@@ -1892,10 +1913,10 @@ box-sizing: border-box;
   }
 .pagination li:last-child a {
   width: 140px;
-  padding-left: 25px;
+  padding-left: 31px;
 }
 .pagination li{
-  margin-right: 25px;
+  margin-right: 10px;
 }
 .next-page {
   text-transform: uppercase;
@@ -1927,6 +1948,7 @@ box-sizing: border-box;
 font-family: "PT Sans", arial, sans-serif;
 font-size: 13px;
 line-height: 24px;
+padding-right: 30px;
 }
 
 
@@ -1936,11 +1958,11 @@ line-height: 24px;
 
 }
 .few-words-block{
-padding-top: 67px;
-padding-bottom: 67px;
+padding-top: 40px;
+padding-bottom: 58px;
 }
 .few-words-block h2 {
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 
 /* сетка на гридах */
@@ -1951,9 +1973,9 @@ padding-bottom: 67px;
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
-  gap: 20px;
-  margin-bottom: 50px;
-  padding-top: 30px;
+  gap: 18px;
+  margin-bottom: 47px;
+  padding-top: 29px;
 }
 .wrapper-center-grid {
   width: 940px;
@@ -2255,6 +2277,7 @@ cursor: pointer;
   height: 112px;
   display: flex;
     flex-wrap: wrap;
+    margin-top: 69px;
 }
 .modal-button {
   width: 460px;
@@ -2277,7 +2300,7 @@ margin-bottom: 37px;
 }
 .name,
 .email {
-  font: "PT Sans", arial, sans-serif;
+  font-family:  "PT Sans", arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   width: 220px;
@@ -2290,7 +2313,7 @@ margin-bottom: 37px;
   padding-left: 10px;
 }
 .message {
-  font: "PT Sans", arial, sans-serif;
+  font-family: "PT Sans", arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   width: 460px;
@@ -2316,13 +2339,35 @@ box-shadow: 0px 0px 14.7px var(--modal-map-shadow);
   height: 282px;
   box-shadow: 0px 20px 40px var( --modal-shadow);
 background-color: var(--basic-white);
+box-sizing: border-box;
 
+}
+.modal-basket .close-modal {
+left: 587px;
+top: 16px;
 }
 
 .modal-basket .background-modal {
   justify-content: center;
-  align-items: center;
+padding-left: 9px;
+padding-top: 35px;
+box-sizing: border-box;
 }
+.background-modal .button {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+.background-modal .button-all {
+  color: var(--basic-white);
+    background-color: var(--basic-red);
+}
+.button-all:hover {
+  background-color: var(--hover-button-red);
+}
+.button-all:focus {
+  background-color: var(--focus-button-red);
+}
+
 .modal-basket .button {
   width: 192px;
   height: 38px;
@@ -2335,9 +2380,12 @@ background-color: var(--basic-white);
   padding: 0;
   margin: 0;
   text-align: center;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 65px;
+
   position: relative;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
 
 }
 .modal-basket p::before {
@@ -2348,8 +2396,8 @@ background-color: var(--basic-white);
   background-repeat: no-repeat;
   width: 66px;
   height: 66px;
-  top:47px;
-  left:133px;
+  top:49px;
+  left:80px;
 
 }
 .products-block {
@@ -2370,9 +2418,12 @@ background-color: var(--basic-white);
     width: 100%;
     height: 100%;
     left:auto;
-    top:50vh;
+    top:30vh;
     display: none;
   }
   .block {
     display: block;
+  }
+  .contacts-header-authorized {
+    width: 274px;
   }
