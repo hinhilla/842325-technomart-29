@@ -16,7 +16,7 @@
                 <img src="img/logo-technomart.svg" width="108" height="18" alt="переход на главную страницу Техномарта">
               </a>
               <label for="search" class="search-label">
-                <input id="search" type="text" name="search" placeholder="Поиск" class="search">
+                <input id="search" type="text" name="search" placeholder="Поиск:" class="search">
                 <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z" fill="#fff"/></svg>
               </label>
               <a href="C:/Users/Катя/Documents/github/842325-technomart-29/boormarks.html" class="bookmarks">Закладки: <span>0</span></a>
@@ -25,7 +25,7 @@
             </div>
           </div>
         <div class="header-info">
-          <p class="description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+          <p class="description">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</p>
           <div class="contacts-header">
             <a href="tel:+78125550555" class="header-telephone">+7 (812) 555-05-55</a>
             <address class="header-address">
@@ -81,7 +81,7 @@
               <li class="slider">
                 <ul class="slider-list">
                   <li>
-                    <section class="slide slide-1 ">
+                    <section class="slide slide-1 slide-current ">
                       <div class="slider-content">
                         <h3>Перфораторы</h3>
                         <p>Настоящие мужские игрушки</p>
@@ -91,14 +91,12 @@
                     </section>
                   </li>
                   <li>
-                    <section class="slide slide-2 slide-current">
+                    <section class="slide slide-2 ">
                       <div class="slider-content">
                         <h3>Дрели</h3>
                         <p>Соседям на радость!</p>
                         <a href="C:/Users/Катя/Documents/github/842325-technomart-29/catalog.html" class="button button-all button-slider">открыть каталог</a>
-
                       </div>
-
                       <img src="img/drill.jpg" alt="Дрель" width="620" height="266">
                     </section>
                   </li>
@@ -120,7 +118,11 @@
                   <img src="img/9000.jpg" width="184" height="164" alt="Легкий перфоратор с питанием от сети">
                   <h3>Перфоратор BOSCH BFG 9000</h3>
                   <span class="old-price">32500 Р.</span>
-                  <span class="new-price">25500 Р.</span>
+                  <!-- в макете старая цена зачеркнута ниже середины текста, нужно ли это подгонять? -->
+                  <div class="new-price">
+                    <span>25500 Р.</span>
+                  </div>
+
                   <div class="product-hover">
                     <button type="button" name="button" class="button button-buy">Купить</button>
                     <button type="button" name="button" class="button button-add-bookmarks">В закладки</button>
@@ -130,7 +132,9 @@
                 <img src="img/3000-2000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор">
                 <h3>Перфоратор BOSCH BFG 3000</h3>
                 <span class="old-price">22500 Р.</span>
-                <span class="new-price">15500 Р.</span>
+                <div class="new-price">
+                  <span>15500 Р.</span>
+                </div>
                 <div class="product-hover">
                   <button type="button" name="button" class="button button-buy">Купить</button>
                   <button type="button" name="button" class="button button-add-bookmarks">В закладки</button>
@@ -140,7 +144,9 @@
                 <img src="img/6000.jpg" width="144" height="128" alt="Аккумуляторный перфоратор">
                 <h3>Перфоратор BOSCH BFG 6000</h3>
                 <span class="old-price">30500 Р.</span>
-                <span class="new-price">25500 Р.</span>
+                <div class="new-price">
+                  <span>25500 Р.</span>
+                </div>
                 <div class="product-hover">
                   <button type="button" name="button" class="button button-buy">Купить</button>
                   <button type="button" name="button" class="button button-add-bookmarks">В закладки</button>
@@ -149,7 +155,9 @@
               <li  class="popular-products-item new">
                 <img src="img/3000-2000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор">
                 <h3>Перфоратор BOSCH BFG 2000</h3>
-                <span class="new-price">12500 Р.</span>
+                <div class="new-price">
+                  <span>12500 Р.</span>
+                </div>
                 <div class="product-hover">
                   <button type="button" name="button" class="button button-buy">Купить</button>
                   <button type="button" name="button" class="button button-add-bookmarks">В закладки</button>
@@ -227,7 +235,7 @@
             </ul>
           </section>
           <div class="delivery-guarantee-credit">
-            <section class="delivery">
+            <section class="delivery current-services">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо
                 к вашему подъезду совершенно бесплатно!
@@ -238,10 +246,10 @@
               <h3>Гарантия</h3>
               <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
             </section>
-            <section class="credit current-services">
+            <section class="credit">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-              <button type="button" name="button" class="button">Отправить заявку</button>
+              <button type="button" name="button" class="button button-all">Отправить заявку</button>
             </section>
           </div>
         </div>
@@ -263,7 +271,7 @@
         </section>
         <section class="contacts">
           <h2>Контакты</h2>
-          <p>Вы можете забрать товар сами,
+          <p>Вы можете забрать товар сами, <br>
   заехав в наш офис:</p>
           <img src="img/map.jpg" width="300" height="158" alt="Большая Конюшенная улица, дом 19" class="map">
           <button type="button" class="button  button-all button-text-us">Заблудились? Напишите нам!</button>
@@ -284,8 +292,8 @@
         <div class="footer-navigation-block">
           <div class="footer-address-block">
             <div class="footer-container">
-              <a href="C:/Users/Катя/Documents/github/842325-technomart-29/index.html" class="logo">
-                <img src="img/logo-technomart.svg" width="108" height="18" alt="переход на главную страницу Техномарта">
+              <a href="C:/Users/Катя/Documents/github/842325-technomart-29/index.html" class="logo footer-logo">
+                <img src="img/logo-technomart.svg" width="138" height="23" alt="переход на главную страницу Техномарта">
               </a>
               <address class="footer-address">
                 г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -374,7 +382,7 @@
             </label>
           </div>
           <div class="background-modal">
-            <button type="button" name="button" class="button modal-button">Отправить</button>
+            <button type="button" name="button" class="button button-all modal-button">Отправить</button>
           </div>
         </section>
       </div>
