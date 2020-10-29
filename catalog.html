@@ -11,18 +11,20 @@
     <header class="main-header main-header-catalog">
         <nav class="main-navigation">
           <div class="user-navigation-container-blue">
-            <div class="user-navigation">
-              <a href="index.html" class="logo">
-                <img src="img/logo-technomart.svg" width="108" height="18" alt="переход на главную страницу Техномарта">
-              </a>
-              <label for="search" class="search-label">
-                <input id="search" type="text" name="search" placeholder="Поиск" class="search">
-                <svg aria-hidden="true" focusable="false" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z" fill="#fff"/></svg>
-              </label>
-              <a href="boormarks.html" class="bookmarks">Закладки: <span>0</span></a>
-              <a href="basket.html" class="basket">Корзина: <span>10</span></a>
-              <a href="set-an-order.html" class="set-an-order">Оформить заказ</a>
-            </div>
+            <form class="user-navigation-form" action="https://echo.htmlacademy.ru/" method="post">
+              <div class="user-navigation">
+                <a href="index.html" class="logo">
+                  <img src="img/logo-technomart.svg" width="108" height="18" alt="переход на главную страницу Техномарта">
+                </a>
+                <label for="search" class="search-label">
+                  <input id="search" type="text" name="search" placeholder="Поиск" class="search">
+                  <svg aria-hidden="true" focusable="false" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z" fill="#fff"/></svg>
+                </label>
+                <a href="boormarks.html" class="bookmarks">Закладки: <span>0</span></a>
+                <a href="basket.html" class="basket">Корзина: <span>10</span></a>
+                <a href="set-an-order.html" class="set-an-order">Оформить заказ</a>
+              </div>
+            </form>
           </div>
         <div class="header-info">
           <p class="description">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</p>
@@ -68,89 +70,93 @@
           <li>Перфораторы</li>
         </ul>
         <h1 class="perforators">Перфораторы</h1>
-        <section class="filter-block">
-          <h2 class="filter">Фильтр:</h2>
-          <fieldset class="price-filter-block">
-            <legend class="price-filter">Цена</legend>
-            <div class="range-filter">
-              <div class="range-controls">
-                <div class="scale">
-                  <div class="bar" style="
-                  width:80%;
-                  margin-left: 0">
+        <form class="filter-block-form" action="https://echo.htmlacademy.ru/ " method="post">
+          <section class="filter-block">
+            <h2 class="filter">Фильтр:</h2>
+            <fieldset class="price-filter-block">
+              <legend class="price-filter">Цена</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="
+                    width:80%;
+                    margin-left: 0">
+                    </div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0" style="left:8%;">
+                  </div>
+                  <div class="toggle toggle-max" tabindex="0" style="left:73%;">
                   </div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0" style="left:8%;">
-                </div>
-                <div class="toggle toggle-max" tabindex="0" style="left:73%;">
+                <div class="price-controls">
+                  <label for="min-price">
+                    <input id="min-price" type="number" name="min-price" value="0">
+                  </label>
+                  <label for="max-price"> &mdash;
+                    <input id="max-price" type="number" name="max-price" value="30000" class="max-price">
+                  </label>
                 </div>
               </div>
-              <div class="price-controls">
-                <label for="min-price">
-                  <input id="min-price" type="number" name="min-price" value="0">
-                </label>
-                <label for="max-price"> &mdash;<input id="max-price" type="number" name="max-price" value="30000" class="max-price">
-                </label>
-              </div>
-            </div>
-          </fieldset>
+            </fieldset>
 
-          <fieldset class="manufacturers-block">
-            <legend class="manufacturers-filter">Производители:</legend>
-            <ul class="manufacturers-list">
-              <li>
-                <input type="checkbox" name="BOSCH" id="bosch" class="checkbox visually-hidden" checked >
-                <label for="bosch">
+            <fieldset class="manufacturers-block">
+              <legend class="manufacturers-filter">Производители:</legend>
+              <ul class="manufacturers-list">
+                <li>
+                  <input type="checkbox" name="BOSCH" id="bosch" class="checkbox visually-hidden" checked >
+                  <label for="bosch">
+                      <svg class="checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.28 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.96-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
+                      <svg class="checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
+                      BOSCH
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="ИНТЕРСКОЛ" id="interskol" class="checkbox visually-hidden">
+                  <label for="interskol">
                     <svg class="checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.28 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.96-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
                     <svg class="checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
-                    BOSCH
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="ИНТЕРСКОЛ" id="interskol" class="checkbox visually-hidden">
-                <label for="interskol">
-                  <svg class="checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.28 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.96-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
-                  <svg class="checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
-                  ИНТЕРСКОЛ</label>
-              </li>
-              <li>
-                <input type="checkbox" name="Makita" id="makita" class="checkbox visually-hidden" checked>
-                <label for="makita">
-                  <svg class="checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.28 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.96-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
-                  <svg class="checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
-                  Makita</label>
-              </li>
-              <li>
-                <input type="checkbox" name="Dewalt" id="dewalt" class="checkbox visually-hidden">
-                <label for="dewalt">
-                  <svg class="checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.28 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.96-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
-                  <svg class="checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
-                Dewalt</label>
-              </li>
-              <li>
-                <input type="checkbox" name="Hitachi" id="hitachi" class="checkbox visually-hidden">
-                <label for="hitachi">
-                  <svg class="checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.28 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.96-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
-                  <svg class="checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
-                Hitachi</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="supply-block">
-            <legend class="supply-filter">Питание:</legend>
-            <ul class="supply-list">
-              <li>
-                <input id="battery" type="radio" name="supply" checked class="supply-radio visually-hidden">
-                <label for="battery">Аккумуляторные</label>
-              </li>
-              <li>
-                <input id="mains" type="radio" name="supply" class=" supply-radio visually-hidden">
-                <label for="mains">Сетевые</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button type="button" name="button" class="show-button" aria-label="Показать результаты фильтра по цене, производителям и типу питания">Показать</button>
-        </section>
+                    ИНТЕРСКОЛ</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="Makita" id="makita" class="checkbox visually-hidden" checked>
+                  <label for="makita">
+                    <svg class="checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.28 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.96-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
+                    <svg class="checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
+                    Makita</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="Dewalt" id="dewalt" class="checkbox visually-hidden">
+                  <label for="dewalt">
+                    <svg class="checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.28 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.96-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
+                    <svg class="checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
+                  Dewalt</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="Hitachi" id="hitachi" class="checkbox visually-hidden">
+                  <label for="hitachi">
+                    <svg class="checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.28 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.96-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
+                    <svg class="checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
+                  Hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="supply-block">
+              <legend class="supply-filter">Питание:</legend>
+              <ul class="supply-list">
+                <li>
+                  <input id="battery" type="radio" name="supply" checked class="supply-radio visually-hidden">
+                  <label for="battery">Аккумуляторные</label>
+                </li>
+                <li>
+                  <input id="mains" type="radio" name="supply" class=" supply-radio visually-hidden">
+                  <label for="mains">Сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button type="submit" name="button" class="show-button" aria-label="Показать результаты фильтра по цене, производителям и типу питания">Показать</button>
+          </section>
+        </form>
+
         <section class="sort-block">
             <h2 class="sort">Сортировка</h2>
             <ul class="sort-list">
@@ -376,30 +382,6 @@
           </div>
         </div>
       </footer>
-      <div class="modal-write-us-wrapper">
-        <section class="modal modal-write-us">
-          <h2 class="visually-hidden">Форма регистрации</h2>
-          <button type="button" name="button" class="close-modal close-modal-write-us" aria-label="Закрыть окно"></button>
-          <div class="modal-imputs">
-            <label for="name">
-              <span>Ваше имя:</span>
-              <input type="text" name="name" value="" id="name" placeholder="Имя Фамилия" class="name">
-            </label>
-            <label for="email">
-              <span>Ваш e-mail:</span>
-              <input type="text" name="email" value="" id="email" placeholder="email@example.com" class="email">
-            </label>
-            <label for="message">
-              <span>Текст письма:</span>
-              <textarea name="message" id="message" placeholder="В свободной форме" class="message">
-              </textarea>
-              <!-- отображается плейсхолдер только после выделения блока -->
-            </label>
-          </div>
-          <div class="background-modal">
-            <button type="button" name="button" class="button button-all modal-button">Отправить</button>
-          </div>
-        </section>
       </div>
   </body>
 </html>
