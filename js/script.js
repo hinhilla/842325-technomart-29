@@ -12,6 +12,18 @@ const closeAddInBusket = document.querySelector('.close-modal-basket');
 const openMap = document.querySelector('.map');
 const map = document.querySelector('.map-wrapper');
 const closeMap = document.querySelector('.close-modal-map');
+const tabsContent = document.querySelectorAll('.delivery-guarantee-credit section');
+
+// const deliverySection = document.querySelector('.delivery');
+// const guaranteeSection = document.querySelector('.guarantee');
+// const creditSection = document.querySelector('.credit');
+//
+// const deliveryButton = document.querySelector('[data-id="delivery"]');
+// const guaranteeButton = document.querySelector('[data-id="guarantee"]');
+// const creditButton = document.querySelector('[data-id="credit"]');
+
+const container = document.querySelector('.serviсes-list');
+const btns = document.querySelectorAll('.serviсes-item button');
 
 
 let ifStorageSupport = true;
@@ -35,34 +47,33 @@ if(openWriteUs) {
 
 
 
-
-  if (storageLogin) {
-    if (storageEmail) {
-      login.value = storageLogin;
-      email.value = storageEmail;
-      message.focus();
-    }
-    else {
-    login.value = storageLogin;
-    email.focus();
-    }
-  }
-  else {
-    if (storageEmail) {
-    email.value = storageEmail;
-    login.focus();
-    }
-    else {
-    login.focus();
-    }
-  };
-
+  //
+  // if (login && storageLogin) {
+  //   if (storageEmail) {
+  //     login.value = storageLogin;
+  //     email.value = storageEmail;
+  //     message.focus();
+  //   }
+  //   else {
+  //   login.value = storageLogin;
+  //   email.focus();
+  //   }
+  // }
+  // else {
+  //   if (login && storageEmail) {
+  //   email.value = storageEmail;
+  //   login.focus();
+  //   }
+  //   else {
+  //   login.focus();
+  //   }
+  // };
+try {
 buttonWriteUs.addEventListener('click', function (evt){
 evt.preventDefault();
 
 writeUs.classList.add('show-modal');
 });
-
 closeWriteUs.addEventListener('click', function (evt) {
   evt.preventDefault();
 
@@ -99,6 +110,76 @@ window.addEventListener('keydown', function (evt) {
     }
   }
 })
+
+
+openMap.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  map.classList.add("show-modal");
+});
+
+closeMap.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  map.classList.remove("show-modal");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (map.classList.contains("show-modal")) {
+      evt.preventDefault();
+      map.classList.remove("show-modal");
+    }
+  }
+});
+
+
+openMap.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  map.classList.add("show-modal");
+});
+
+closeMap.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  map.classList.remove("show-modal");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (map.classList.contains("show-modal")) {
+      evt.preventDefault();
+      map.classList.remove("show-modal");
+    }
+  }
+});
+const toggleTab = (pointer) => {
+  tabsContent.forEach((tab) => {
+    tab.classList.remove('current-services');
+    if (tab.classList.contains(`${pointer}`)) {
+      tab.classList.add('current-services');
+    }
+  })
+  };
+
+container.addEventListener('click', function (evt) {
+  if (evt.target === evt.target.closest('button')) {
+    btns.forEach((btn) => {
+      btn.classList.remove('active-service')
+    })
+    evt.target.classList.add('active-service');
+    const pointer = evt.target.dataset.id;
+    toggleTab(pointer)
+  }
+})
+
+
+
+
+}
+catch (e) {
+  console.log('нет формы');
+}
+
+
+
 buy.forEach((btn) =>{
   btn.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -122,47 +203,6 @@ window.addEventListener("keydown", function (evt) {
       addInBusket.classList.remove("show-modal");
 
 
-    }
-  }
-});
-
-
-
-openMap.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  map.classList.add("show-modal");
-});
-
-closeMap.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  map.classList.remove("show-modal");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (map.classList.contains("show-modal")) {
-      evt.preventDefault();
-      map.classList.remove("show-modal");
-    }
-  }
-});
-
-
-openMap.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  map.classList.add("show-modal");
-});
-
-closeMap.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  map.classList.remove("show-modal");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (map.classList.contains("show-modal")) {
-      evt.preventDefault();
-      map.classList.remove("show-modal");
     }
   }
 });
