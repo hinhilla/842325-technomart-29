@@ -3,17 +3,12 @@ const openWriteUs = document.querySelector('.registration');
 const closeWriteUs = document.querySelector('.close-modal-write-us');
 const login = document.querySelector('.name');
 const buttonWriteUs = document.querySelector('.button-text-us');
-
-
-
-
 const formWriteUs = document.querySelector('.modal-write-us-form');
 const email = document.querySelector('[name=email]');
 const message = document.querySelector('.message');
 const buy = document.querySelectorAll('.button-buy');
 const addInBusket = document.querySelector('.modal-basket-wrapper');
 const closeAddInBusket = document.querySelector('.close-modal-basket');
-
 const openMap = document.querySelector('.map');
 const map = document.querySelector('.map-wrapper');
 const closeMap = document.querySelector('.close-modal-map');
@@ -64,13 +59,13 @@ if(openWriteUs) {
 
 buttonWriteUs.addEventListener('click', function (evt){
 evt.preventDefault();
-console.log('1');
+
 writeUs.classList.add('show-modal');
 });
 
 closeWriteUs.addEventListener('click', function (evt) {
   evt.preventDefault();
-  console.log('2');
+
   writeUs.classList.remove('show-modal');
   writeUs.classList.remove('error');
 });
@@ -97,7 +92,7 @@ window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     if (writeUs.classList.contains('show-modal')) {
       evt.preventDefault();
-      console.log('3');
+
       writeUs.classList.remove('show-modal');
       writeUs.classList.remove('error');
 
