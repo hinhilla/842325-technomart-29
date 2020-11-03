@@ -13,14 +13,10 @@ const openMap = document.querySelector('.map');
 const map = document.querySelector('.map-wrapper');
 const closeMap = document.querySelector('.close-modal-map');
 const tabsContent = document.querySelectorAll('.delivery-guarantee-credit section');
+const bookmarks = document.querySelector('.bookmarks');
+const basket = document.querySelector('.basket');
+const addInBookmarks = document.querySelectorAll('.button-add-bookmarks');
 
-// const deliverySection = document.querySelector('.delivery');
-// const guaranteeSection = document.querySelector('.guarantee');
-// const creditSection = document.querySelector('.credit');
-//
-// const deliveryButton = document.querySelector('[data-id="delivery"]');
-// const guaranteeButton = document.querySelector('[data-id="guarantee"]');
-// const creditButton = document.querySelector('[data-id="credit"]');
 
 const container = document.querySelector('.serviсes-list');
 const btns = document.querySelectorAll('.serviсes-item button');
@@ -184,8 +180,18 @@ buy.forEach((btn) =>{
   btn.addEventListener('click', function (evt) {
     evt.preventDefault();
     addInBusket.classList.add('show-modal');
+    basket.classList.add('added');
   });
-})
+});
+
+addInBookmarks.forEach((btn) =>{
+  btn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    bookmarks.classList.add('added');
+  });
+});
+
+
 
 if (closeAddInBusket) {
   closeAddInBusket.addEventListener('click', function (evt) {
