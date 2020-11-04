@@ -16,11 +16,8 @@ const tabsContent = document.querySelectorAll('.delivery-guarantee-credit sectio
 const bookmarks = document.querySelector('.bookmarks');
 const basket = document.querySelector('.basket');
 const addInBookmarks = document.querySelectorAll('.button-add-bookmarks');
-
-
 const container = document.querySelector('.serviсes-list');
 const btns = document.querySelectorAll('.serviсes-item button');
-
 
 let ifStorageSupport = true;
 let storageLogin = '';
@@ -29,50 +26,25 @@ let storageEmail = '';
 try {
   storageLogin = localStorage.getItem('login');
   storageEmail = localStorage.getItem('email');
-
 }  catch (err) {
     ifStorageSupport = false;
-  }
+  };
+
 if(openWriteUs) {
   openWriteUs.addEventListener('click', function (evt) {
     evt.preventDefault();
     writeUs.classList.add('show-modal');
   })
-
 };
 
-
-
-  //
-  // if (login && storageLogin) {
-  //   if (storageEmail) {
-  //     login.value = storageLogin;
-  //     email.value = storageEmail;
-  //     message.focus();
-  //   }
-  //   else {
-  //   login.value = storageLogin;
-  //   email.focus();
-  //   }
-  // }
-  // else {
-  //   if (login && storageEmail) {
-  //   email.value = storageEmail;
-  //   login.focus();
-  //   }
-  //   else {
-  //   login.focus();
-  //   }
-  // };
 try {
 buttonWriteUs.addEventListener('click', function (evt){
 evt.preventDefault();
-
 writeUs.classList.add('show-modal');
 });
+
 closeWriteUs.addEventListener('click', function (evt) {
   evt.preventDefault();
-
   writeUs.classList.remove('show-modal');
   writeUs.classList.remove('error');
 });
@@ -80,18 +52,15 @@ closeWriteUs.addEventListener('click', function (evt) {
 formWriteUs.addEventListener('submit', function (evt) {
   if (!login.value || !email.value || !message.value) {
     evt.preventDefault();
-
     writeUs.classList.remove('error');
     writeUs.offsetWidth = writeUs.offsetWidth;
     writeUs.classList.add('error');
-
   }
   else {
     if (ifStorageSupport) {
     localStorage.setItem('login', login.value);
     localStorage.setItem('email', email.value);
   }
-
   }
 });
 
@@ -99,14 +68,11 @@ window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     if (writeUs.classList.contains('show-modal')) {
       evt.preventDefault();
-
       writeUs.classList.remove('show-modal');
       writeUs.classList.remove('error');
-
     }
   }
-})
-
+});
 
 openMap.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -127,7 +93,6 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-
 openMap.addEventListener("click", function (evt) {
   evt.preventDefault();
   map.classList.add("show-modal");
@@ -146,10 +111,11 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
 const toggleTab = (pointer) => {
   tabsContent.forEach((tab) => {
     tab.classList.remove('current-services');
-    if (tab.classList.contains(`${pointer}`)) {
+    if (tab.classList.contains('${pointer}')) {
       tab.classList.add('current-services');
     }
   })
@@ -165,16 +131,10 @@ container.addEventListener('click', function (evt) {
     toggleTab(pointer)
   }
 })
-
-
-
-
 }
 catch (e) {
-  console.log('нет формы');
+  console.log('нет такого окна');
 }
-
-
 
 buy.forEach((btn) =>{
   btn.addEventListener('click', function (evt) {
@@ -191,15 +151,11 @@ addInBookmarks.forEach((btn) =>{
   });
 });
 
-
-
 if (closeAddInBusket) {
   closeAddInBusket.addEventListener('click', function (evt) {
-
     evt.preventDefault();
     addInBusket.classList.remove('show-modal');
   });
-
 };
 
 window.addEventListener("keydown", function (evt) {
@@ -207,8 +163,6 @@ window.addEventListener("keydown", function (evt) {
     if (addInBusket.classList.contains("show-modal")) {
       evt.preventDefault();
       addInBusket.classList.remove("show-modal");
-
-
     }
   }
 });
